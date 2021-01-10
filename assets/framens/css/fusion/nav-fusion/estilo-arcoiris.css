@@ -1,0 +1,78 @@
+/* ESTILO ARCOIRIS
+--------------------------*/
+
+ul.estilo-arcoiris .sub-nav {
+	margin-top: 20px;
+}
+ul.estilo-arcoiris .sub-nav > li:hover {
+	background-color:  rgba(0,0,0,.08);
+}
+ul.estilo-arcoiris a {
+	color: #fff !important;
+	position: relative;
+}
+ul.estilo-arcoiris > li > a:before {
+	content: '';
+	position: absolute;
+	left: 20px;
+	bottom: -10px;
+	width: 0;
+	height: 4px;
+	transition: all ease-out 300ms;
+}
+ul.estilo-arcoiris > li:hover a:before {
+	width: calc(100% - 40px);
+}
+/* prioridad primero */
+ul.estilo-arcoiris > li:nth-child(1) {
+	background-color: #7BC936;
+	border-radius: 10rem 0 0 10rem;
+}	ul.estilo-arcoiris > li:nth-child(1) a:before {
+		background-color:  #7BC936;
+	}	ul > li:nth-child(1) > ul.sub-nav {
+		background-color:  #7BC936;
+	}	ul > li:nth-child(1) .flecha-arr:before {
+		border-bottom-color:  #7BC936;
+	}
+
+ul.estilo-arcoiris > li:nth-child(2) {
+	background-color: #319D3B;
+}	ul.estilo-arcoiris > li:nth-child(2) a:before {
+		background-color:  #319D3B;
+	}	ul > li:nth-child(2) > ul.sub-nav {
+		background-color:  #319D3B;
+	}	ul > li:nth-child(2) .flecha-arr:before {
+		border-bottom-color:  #319D3B;
+	}
+
+ul.estilo-arcoiris > li:nth-child(3) {
+	background-color: #FFC85D;
+}	ul.estilo-arcoiris > li:nth-child(3) a:before {
+		background-color:  #FFC85D;
+	}	ul > li:nth-child(3) > ul.sub-nav {
+		background-color:  #FFC85D;
+	}	ul > li:nth-child(3) .flecha-arr:before {
+		border-bottom-color:  #FFC85D;
+	}
+
+ul.estilo-arcoiris > li:nth-child(4) {
+	background-color: #F954FF;
+}	ul.estilo-arcoiris > li:nth-child(4) a:before {
+		background-color:  #F954FF;
+	}	ul > li:nth-child(4) > ul.sub-nav {
+		background-color:  #F954FF;
+	}	ul > li:nth-child(4) .flecha-arr:before {
+		border-bottom-color:  #F954FF;
+	}
+
+/* prioridad ultimo */
+ul.estilo-arcoiris > li:nth-child(5) {
+	background-color: #B554FF;
+	border-radius: 0 10rem 10rem 0;
+}	ul.estilo-arcoiris > li:nth-child(5) a:before {
+		background-color:  #B554FF;
+	}	ul > li:nth-child(5) > ul.sub-nav {
+		background-color:  #B554FF;
+	}	ul > li:nth-child(5) .flecha-arr:before {
+		border-bottom-color:  #B554FF;
+	}

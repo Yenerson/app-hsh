@@ -1,0 +1,405 @@
+/* palabras(clase) claves
+	|_ gra: tamaño grande
+	|_ med: tamaño mediano
+	|_ peq: tamaño pequeño
+	|_ activo: estado activo
+	|_ inactivo: estado inactivo
+	|_ ocupado: estado ocupado
+	|_ actividad: estado ejecutando actividad
+	|_ mini: la misma pero mas pequeña
+	|_ estilo-dos: segundo modelo para la misma
+	|_ estilo-tres tercer modelo para la misma
+	|_ estilo-der: ajustar todo a la derecha
+	|_ estilo-cen: ajustar todo a al centro
+	|_ estilo-izq: ajustar todo a la izquierda
+	|_ silenciar: bloquea el contenido
+	|_ portada: contiene una portada
+	|_ ver: alineacion de objetos en vertical
+	|_ hor: alineacion de objetos en horizontal
+
+---------------------------*/
+
+/* Contenedores utilidades
+	|_ carta
+	|_ tarjetas
+	|_ tablero
+	|_ campo
+	|_ lista
+	|_ bloque
+
+---------------------------*/
+/* utilidad para generar cortinas, targetas, alertas y mucho mas
+su utilidad varia segun la etiqueta padre */
+.cart,* [class*=cart-],
+.tarj,* [class*=tarj-] {
+	width        : 100%;
+	position     : relative;
+	margin-bottom: 1em;
+	display      : -webkit-inline-flex;
+	display      : -webkit-box;
+	display      : -ms-flexbox;
+	display      : inline-flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+/* contenedor carta.
+su contenido se posiciona
+en columnas */
+.cart,* [class*=cart-] {
+	-webkit-box-direction: normal;
+	-webkit-box-orient   : vertical;
+	-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+			flex-direction: column;
+}
+
+.grup,* [class*=grup-] {
+	position     : relative;
+	margin-bottom: 1em;
+    -webkit-box-direction: normal;
+	display: -webkit-inline-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: inline-flex;
+    -webkit-box-align: stretch;
+       -ms-flex-align: stretch;
+          align-items: stretch;
+}
+
+/* contenedor de tableros de contenido */
+.tabl,* [class*=tabl-] {
+	position     : relative;
+	margin-bottom: 1em;
+	display      : block;
+	width        : 100%;
+}
+
+/* bloque para utilidades flexibles */
+.bloq-cabecera,		/* bloque para cabecera de tarj, cart, tabl */
+.bloq-mult,			/* bloque para multiproposito */
+.bloq-ul,			/* bloque para listado ul */
+.bloq-flexi {
+	position: relative;
+ 	width: 100%;
+	display: -webkit-inline-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: inline-flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+
+/* Contenedores importantes para creacion de
+tableros, tarjetas, cartas */
+/* bloques principales para extructuracion de
+	|_ tarjeta
+	|_ cartas
+	|_ campos
+	|_ grupos
+	|_ chips
+ */
+
+.bloq-estatus,		/* bloque set de contenido avatar, burbuja, estado */
+.bloq-auto,			/* bloque con ancho automatico */
+.bloq-dato,			/* bloque para datos */
+.bloq				/* bloque defecto */ {
+	position: relative;
+}
+.bloq-formulario,	/* bloque para formularios */
+.bloq-contenido,	/* bloque para contenido */
+.bloq-portada,		/* bloque para portadas */
+.bloq-botones,		/* bloque para botones */
+.bloq-titulo,		/* bloque para titulos */
+.bloq-cabeza,		/* bloque para cabeza de contenidos */
+.bloq-cuerpo,		/* bloque para contenedor de cuerpo */
+.bloq-enlace,		/* bloque para enlaces */
+.bloq-texto,		/* bloque para texto */
+.bloq-video,		/* bloque para video */
+.bloq-autor,		/* bloque para titulo de autor */
+.bloq-plus,			/* bloque para multiples funciopnes */
+.bloq-menu,			/* bloque para contenido de menu */
+.bloq-pie,			/* bloque para pie de contenidos */
+.bloq-img,			/* bloque para contener imagenes */
+.bloq-li			/* bloque para listado ul */ {
+	position: relative;
+	width: 100%;
+}
+.bloq-pegajoso {
+	position: relative;
+	display : inline-flex;
+	width   : 100%;
+	top     : 0;
+	position: -webkit-sticky;
+		position: -ms-sticky;
+		 position: -o-sticky;
+			position: sticky;
+}
+
+.bloq-menu,			/* bloq para menus*/
+.bloq-adhesivo,		/* bloq para cintas adhesiva de info nuevo, oferta etc*/
+.bloq-flo			/* bloque flotante */ {
+	position: absolute;
+	width: auto;
+}
+.bloq-cortina,
+.bloq-fijo {
+	width: 100%;
+	height: 100%;
+    position: absolute;
+    top: 0; left: 0;
+}
+.bloq-caja			/* bloque caja */ {
+	display: block;
+	width: 100%;
+	position: relative;
+}
+
+/* mascara */
+.bloq-avatar {
+	overflow: hidden;
+}
+
+/* bloque de bobones */
+.bloq-botones.botones-bla [class*=boton] {
+	background-color: #fff;
+	color: #333;
+}
+.bloq-botones [class*=boton-],
+.bloq-botones .boton {
+	border-radius: 0;
+	float: left;
+	box-shadow: none !important;
+}
+.bloq-botones [class*=boton-] + [class*=boton-],
+.bloq-botones .boton + .boton {
+	border-left: 1px solid rgba(0,0,0,.15);
+}
+
+.bloq-botones.redon-red > [class*=boton]:first-child {
+	border-top-left-radius: 100rem;
+	border-bottom-left-radius: 100rem;
+}
+.bloq-botones.redon-red > [class*=boton]:last-child {
+	border-top-right-radius: 100rem;
+	border-bottom-right-radius: 100rem;
+}
+
+
+/* bloq estatud de avartar */
+.bloq-estatus		/* bloque set de contenido como avatar, burbuja, estado */ {
+	width           : auto;
+	height          : auto;
+	border          : 2px solid transparent;
+	background-color: #ffffff;
+	border-radius   : 100%;
+	padding         : 1px;
+}
+.bloq-estatus.activo {
+	border-color: #58d458;
+} 
+.bloq-estatus.inactivo {
+	border-color: #C3C3C3;
+} 
+.bloq-estatus.ocupado {
+	border-color: #ff8080;
+} 
+.bloq-estatus.actividad {
+	border-color: #80c0ff;
+}
+.bloq-linea {
+	-ms-text-overflow: ellipsis;
+	text-overflow    : ellipsis;
+	white-space      : nowrap;
+}
+/* ajuste bloq-linea para: bloq- icono, img, avatar*/
+.bloq-linea .bloq-avatar,
+.bloq-linea .bloq-img,
+.bloq-linea .bloq-icono {
+	width         : 1.7rem;
+	height        : 1.7rem;
+	vertical-align: middle;
+	margin-right  : .45rem;
+}
+.bloq-linea .bloq-img {
+	display: inline-block;
+}
+.bloq-bagon			/* bloque para bagones en carril */ {
+	display: inline-flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	position: relative;
+	width: auto;
+	float: left;
+}
+.bloq-estrech		/* bloque para contener bloques extrecho */ {
+	display: inline-flex;
+	-ms-align-items: center;
+		align-items: center;
+}
+.bloq-enlinea		/* bloque para contenido en linea */ {
+	display: inline-flex;
+	width: auto;
+}
+.bloq-niebla 		/* bloque para ocultar contenido extensos con niebla*/ {
+	position  : absolute;
+	bottom    : 0; left: 0;
+	display   : block;
+	width     : 100%;
+	height    : 50%;
+	background: linear-gradient( 0deg, #ffffff, transparent);
+}
+.bloq-texto 		/* bloque para texto */ {
+	font-size: 1em;
+}
+.bloq-titulo		/* bloque para titulo */  {
+    line-height: 1.1;
+}
+.bloq-icono,		/* bloque para iconos o img */
+.bloq-avatar 		/* bloque para img avatars */ {
+	background-color: #EFEFEF;
+	position        : relative;
+	display         : inline-flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	justify-content: center;
+	-ms-align-items: center;
+		align-items: center;
+    border-radius: 100%;
+    max-width: 320px;
+    max-height: 320px;
+}
+.bloq-icono img,
+.bloq-avatar img {
+	width : 100%;
+	height: auto;
+}
+.bloq-icono > span,	/* ajuste para contenedor de icono <span /> o <i /> */
+.bloq-icono > i {
+	margin: 0;
+}
+.bloq-icono {
+	background-color: transparent;
+}
+.bloq-led			/* bloque led que cambia de color segun su estado */ {
+	width           : 14px;
+	height          : 14px;
+	display         : block;
+	border-radius   : 100%;
+	border          : 2px solid #ffffff;
+	position        : absolute;
+	background-color: #C3C3C3;
+}
+.bloq-led.inactivo {
+    background-color: #C3C3C3;
+}
+.bloq-led.activo {
+    background-color: #58d458;
+}
+.bloq-led.ocupado {
+    background-color: #ff8080;
+}
+.bloq-led.actividad {
+    background-color: #80c0ff;
+}
+.bloq-burbuja 		/* bloque para notificaciones */ {
+    z-index: 1;
+    color: #fff;
+    padding: .2rem .5rem;
+    background-color: #3D3D3D;
+    border-radius: 100rem;
+    font-size: 12px;
+    font-style: none;
+    font-weight: 100;
+    position: absolute;
+    top: -10px;
+    right: -5px;
+    -webkit-box-shadow: 0 0 1px 0 rgba(0,0,0,.1);
+    		box-shadow: 0 0 1px 0 rgba(0,0,0,.1);
+}
+.bloq-burbuja {
+    top: 10px;
+    right: -30px;
+}
+.bloq-burbuja.punta-izq:before {
+    left: -2px;
+    z-index: -1;
+}
+/* ajuste de posicionamiento de set estatus */
+.bloq-estatus .bloq-led {
+    left: -2px; bottom: -2px;
+}
+.bloq-estatus .bloq-burbuja {
+  	right: -5px;
+}
+
+.bloq-li {
+	-webkit-transition: all ease-out 200ms;
+	-o-transition     : all ease-out 200ms;
+	transition        : all ease-out 200ms;
+}
+
+.bloq-autor 		/* bloque para firma de autor */{
+	margin-left  : 15px;
+	margin-bottom: 0;
+	opacity      : 0.7;
+	font-style   : italic;
+}
+.bloq-autor:before {
+	content     : "\—";
+	margin-right: .45em;
+}
+
+/* ajuste marge de parrafo en tarj, cart, tabl */
+.tarj p:last-child,* [class*=tarj-] p:last-child,
+.cart p:last-child,* [class*=cart-] p:last-child,
+.tabl p:last-child,* [class*=tabl-] p:last-child {
+	margin-bottom: 0;
+}
+
+/* bloq boton flotante para tarj, cart y tabl */
+.bloq-boton {
+	width: 20px; height: 20px;
+	border-radius: 100%;
+	z-index: 1;
+	color: inherit !important;
+	display: inline-flex;
+	justify-content: center;
+	-ms-align-items: center;
+		align-items: center;
+		font-size: .8em;
+		cursor: pointer;
+	margin: auto;
+}
+.bloq-boton:hover {
+	opacity: .65;
+}
+.bloq-boton:active {
+	opacity: 1;
+}
+* [class*=tabl-] > .bloq-boton:last-child,
+.tabl > .bloq-boton:last-child,
+* [class*=cart-] > .bloq-boton:last-child,
+.cart > .bloq-boton:last-child,
+* [class*=tarj-] > .bloq-boton:last-child,
+.tarj > .bloq-boton:last-child {
+	top: 5px; right: 5px;
+	position: absolute;
+	font-size: .8em;
+}
+
+.bloq-lista.hor span {
+	display: inline-block;
+}
+.bloq-lista.hor span + span {
+	margin-left: .5rem;
+}
+.bloq-lista.ver span {
+	display: block;
+}
+.bloq-lista.ver span + span {
+	margin-top: .5rem;
+}

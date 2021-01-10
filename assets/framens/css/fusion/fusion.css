@@ -1,0 +1,2347 @@
+/*!
+* Muti caja 2019 v1
+* Compañias de diseño animacion y programacion:
+* Apock Graficos & TRAZIall
+* 
+* Copyright® 2017 Todos los derechos reservados
+----------------------------*/
+/*!
+*   import fusion
+        importaciones
+        |__ normalize
+        |__ formulario
+        |__ tabla-fusion
+        |__ temas-principales.css
+        |__ nav-fusion
+
+*   caja-query // opcional/nesesario
+        |__ caja-script
+
+*   J-query // necesario
+        |__ caja-j-script
+
+----------------------------*/
+
+/*---------------------------------
+  IMPORTACIONES
+-----------------------------------*/
+
+@import url("normalize.min.css");
+@import url("plus-fusion.css");
+@import url("temas-principales.css");
+@import url("tema-pre.css");
+@import url("icss-fusion.css");
+
+/*---------------------------------
+    HTML
+-----------------------------------*/
+
+html {
+    scroll-behavior         : smooth;
+    -webkit-text-size-adjust: 100%;
+    -ms-text-size-adjust    : 100%;
+    text-size-adjust        : 100%;
+    line-height             : 1.4;
+}
+
+
+* {
+    margin: 0;
+    padding: 0;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+body {
+    color           : #404040;
+    font-family     :"Arial", Segoe UI, Tahoma, sans-serifl, Helvetica Neue, Helvetica;
+    min-width       : 320px;
+    margin-left     : auto;
+    margin-right    : auto;
+    background-color: #FFFFFF;
+}
+
+/*---------------------------------
+    RESETEO.
+-----------------------------------*/
+a {
+    color                       : #45749A;
+    text-decoration             : none;
+    -webkit-text-decoration-skip: objects;
+    cursor                      : pointer;
+}
+a:hover {
+    outline: 0;
+    color:#729DC0;
+}
+a:active, a:active *,
+a:focus, a:focus * {
+    outline-style: none;
+    outline      : none;
+    -webkit-outline-style: none;
+        -ms-outline-style: none;
+         -o-outline-style: none;
+}
+
+a.img:hover img {
+    box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px -2px rgba(0, 0, 0, 0.12) !important;
+}
+
+.puntero  {cursor        : default;}                    /*cursor por defecto*/
+.ayuda    {cursor        : help;}                       /*aparece puntero de ayuda*/
+.mano     {cursor        : pointer; cursor: hand;}      /*aparece puntero de mano*/
+.mover    {cursor        : move;}                       /*aparece puntero de mover*/
+.no-click {pointer-events: none;}               /*deshabilitar click cursor*/
+
+/* No seleccionar por usuario. solo aplica para texto */
+.no-selecionar {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+
+/*---------------------------------
+    FUENTES.
+    tamaño y ajuste de margenes
+-----------------------------------*/
+
+b,strong {
+    font-weight: bolder;
+    font-weight: bold;
+}
+
+
+
+h1, .h1 {margin-bottom: .45em; font-size: 2.7rem;}
+
+h1,h2,h3,
+h4,h5,h6 {
+    font-family: inherit;
+    font-weight: 500;
+    color      : inherit;
+}
+.h1,.h2,.h3,
+.h4,.h5,.h6 {
+    font-family: inherit;
+    color      : inherit;
+}
+h2,.h2,h3,.h3 {
+    margin-bottom: .4rem;
+    margin-top   : 0;
+}
+h4,.h4,h5,.h5,h6,.h6 {
+    margin-bottom: .25rem;
+    margin-top   : 0;
+}
+
+h2, .h2 {
+    font-size: 2.2rem;}
+h3, .h3 {
+    font-size: 1.7rem;}
+h4, .h4 {
+    font-size: 1.30rem;}
+h5, .h5 {
+    font-size: 1.15rem;}
+h6, .h6 {
+    font-size: 1rem;
+}
+
+.tex-m,
+.tex-p,
+.tex-mini {
+    line-height: 1.3;
+}
+
+.tex-m {
+    font-size: .9rem !important;}
+.tex-p {
+    font-size: .8rem !important;}
+.tex-mini {
+    font-size: .7rem !important;}
+
+.tg-h1 {font-size: 6.5rem;}
+.tg-h2 {font-size: 5rem;}
+.tg-h3 {font-size: 4rem;}
+
+
+
+/*---------------------------------
+  |__ ajust imagen
+-----------------------------*/
+img {
+    vertical-align: middle;
+    display       : inline-block;
+    position      : relative;
+    max-width     : 100%;
+    -moz-interpolation-mode: bicubic;
+     -ms-interpolation-mode: bicubic;
+}
+
+/*---------------------------------
+    PARRAFO.
+-----------------------------------*/
+p {
+    margin-top: 0;
+    margin-bottom: .85rem;
+}
+
+.l1-gra:first-letter {
+    margin-right: .15em;
+    font-weight : bold;
+    font-size   : 2rem;
+    line-height : 0;
+}
+
+.tex-limitado {
+    max-width     : 100%;
+    vertical-align: middle;
+    display       : inline-block;
+    -ms-text-overflow: ellipsis;
+        text-overflow: ellipsis;
+    white-space: nowrap;
+    overflow   : hidden;
+}
+.tex-salto-lin {
+    white-space: pre-wrap;
+}
+.tex-unalinea {
+    -ms-text-overflow: ellipsis;
+    text-overflow    : ellipsis;
+    white-space      : nowrap;
+}
+.tex-flo-der,
+.tex-flo-izq {
+    position   : relative;
+    max-width  : 40%;
+    line-height: 1;
+    font-size  : 3em;
+    display    : inline-block;
+}
+.tex-flo-der {
+    float      : right;
+    margin-left: 0.9375rem;
+}
+.tex-flo-izq {
+    float       : left;
+    margin-right: 0.9375rem;
+}
+
+.parr-col-2,
+.parr-col-3,
+.parr-col-4 {
+    -webkit-column-gap: 2rem;
+    column-gap        : 2rem;
+}
+.parr-col-2 {
+    -webkit-column-count: 2;
+    column-count: 2;
+}
+.parr-col-3 {
+    -webkit-column-count: 3;
+    column-count: 3;
+}
+.parr-col-4 {
+    -webkit-column-count: 4;
+    column-count: 4;
+}
+.div-col {
+    -webkit-column-rule: 1px solid rgba(0,0,0,0.2);
+    column-rule: 1px solid rgba(0,0,0,0.2);
+}
+
+
+
+
+/*---------------------------------
+    ALINEACION de contenido.
+-----------------------------------*/
+.alin-just {
+    text-align :justify !important;}
+.alin-izq {
+    text-align: left !important;}
+.alin-cen {
+    text-align: center !important;}
+.alin-der {
+    text-align: right !important;}
+.alin-ver {
+    vertical-align: middle !important;}
+
+
+/*---------------------------------
+    ESTILO de fuente.
+-----------------------------------*/
+.tex-may                            {text-transform : uppercase;}
+.tex-vmay                           {font-variant   : small-caps;}
+.tex-i,.tex-ni,.tex-is,.tex-nis     {font-style     : italic; font-style: oblique;}
+.tex-s,.tex-ns,.tex-is,.tex-nis     {text-decoration: underline;}
+.tex-n,.tex-ns,.tex-ni,.tex-nis     {font-weight    : bold;}
+.tex-t                              {text-decoration: line-through;}
+.tex-nor {
+    text-transform: none;
+    font-variant  : normal;
+    font-style    : normal;
+    font-weight   : normal;
+}
+
+.tex-cod {
+    font-family: "consolas";
+    color      : #DD7440;
+    display    : inline-block;
+    padding    : 0 .4em;
+}
+.tex-def {
+    font-weight    : normal;
+    text-transform : none;
+    text-decoration: none;
+}
+
+.tex-plasma {
+    text-shadow: 0 0 1px rgba(0, 0, 0, 0.5);
+}
+.tex-sombra {
+    text-shadow: 0 0 3px rgba(0, 0, 0, 0.5);
+}
+.tex-efe-b {
+    text-shadow: 1px 1px 0 #fff,0 0 3px rgba(0, 0, 0, 0.5);
+}
+.tex-efe-n {
+    text-shadow: 1px 1px 0 #000,0 0 3px rgba(0, 0, 0, 0.5);
+}
+.tex-gradeante {
+  display: inline-block;
+  color: transparent !important;
+  -webkit-background-clip: text !important;
+     -moz-background-clip: text !important;
+          background-clip: text !important;
+  /*color defecto*/
+  background: -webkit-linear-gradient(90deg,#111111,#ADADAD);
+  background: linear-gradient(90deg,#111111,#ADADAD);
+}
+
+.tex-ajunt-1 {
+    line-height: 1;
+}
+
+code {
+    font-family: "consolas", monospace, monospace;
+    font-size: 1em;
+}
+
+
+/*--------------
+bordes solidos
+---------------------------------*/
+.borde-aba {
+    border-bottom: 1px solid;}
+.borde-der {
+    border-right: 1px solid;}
+.borde-izq {
+    border-left: 1px solid;}
+.borde-arr {
+    border-top: 1px solid;}
+.borde-arr-0,
+.borde-der-0,
+.borde-aba-0,
+.borde-izq-0,
+.borde-todo {
+    border: 1px solid;
+}
+.borde-arr-0 {
+    border-top: none !important;}
+.borde-der-0 {
+    border-right: none !important;}
+.borde-aba-0 {
+    border-bottom: none !important;}
+.borde-izq-0 {
+    border-left: none !important;}
+
+.borde-cocido {
+    border-style: dashed;}
+.borde-puntos {
+    border-style: dotted;}
+
+.borde-izq-0,.borde-arr-0,
+.borde-der-0,.borde-aba-0,
+.borde-arr,.borde-der,
+.borde-aba,.borde-izq,
+.borde-todo {
+    border-color: rgba(128,128,128,.5);
+}
+
+/* aplicar borde-solido a detalle punta */
+.borde-todo.punta-arr:before {
+    border-top : 1px solid rgba(128,128,128,.5);
+    border-left: 1px solid rgba(128,128,128,.5);
+}
+.borde-todo.punta-der:before {
+    border-top  : 1px solid rgba(128,128,128,.5);
+    border-right: 1px solid rgba(128,128,128,.5);
+}
+.borde-todo.punta-aba:before {
+    border-bottom: 1px solid rgba(128,128,128,.5);
+    border-right : 1px solid rgba(128,128,128,.5);
+}
+.borde-todo.punta-izq:before {
+    border-bottom: 1px solid rgba(128,128,128,.5);
+    border-left  : 1px solid rgba(128,128,128,.5);
+}
+
+/*---------------------------------
+    LINEA HR.
+-----------------------------------*/
+
+hr {
+    border-top-color: rgba(0,0,0,.2);
+    border       : 0;
+    border-top   : 1px solid;
+    margin-bottom: 1.2em;
+    margin-top   : 1.2em;
+    position     : relative;
+    display      : block;
+    width        : 100%;
+}
+
+/*--------------
+HR utiidades
+---------------------------------*/
+
+.alin-der > hr,.alin-izq > hr,.alin-cen > hr,
+hr.alin-izq,hr.alin-der,hr.alin-cen,
+hr[class*=caj-]{
+    float: none;
+    clear: both;
+}
+.alin-der hr,
+hr.alin-der {
+    margin-right: 0 !important;
+    margin-left: auto !important;
+}
+.alin-izq hr,
+hr.alin-izq {
+    margin-right: auto !important;
+    margin-left: 0 !important;
+}
+.alin-cen hr,
+hr.alin-cen {
+    margin-right: auto !important;
+    margin-left: auto !important;
+}
+hr.peq {width: 5rem;}
+hr.med {width: 10rem;}
+hr.gra {width: 15rem;}
+
+/* tamaño de hr: modifica el tamaño de la linea hr para decoraciones titulo o dividir con hr */
+.lin-2px {border-top: 2px solid;}
+.lin-3px {border-top: 3px solid;}
+
+hr.divisor {margin: 0;}
+
+
+/* Ajuste de fondos: multiples ajustes para colocar tu fondo de pantalla
+    fijo, escroleado, cubierto, ajustad entre otros
+---------------------------*/
+* [class*=fondo-fijo-] {
+    background-attachment: fixed;
+    background-repeat    : no-repeat;
+    background-position  : center;
+    background-size      : cover;
+}
+* [class*=fondo-cubrir-] {
+    background-repeat  : no-repeat;
+    background-size    : cover, 100%;
+    background-position: center;
+}
+* [class*=fondo-expan-] {
+    background-repeat: no-repeat;
+    background-size  : 100% 100%;
+}
+* [class*=fondo-scroll-] {
+    background-attachment: scroll;
+    background-repeat    : no-repeat;
+    background-size      : cover;
+    background-origin: content-box;
+}
+
+
+
+
+
+/*---------------------------------
+    CAJAS en linea
+    |__ genera caj-cod, caj-globo etc
+-----------------------------------*/
+
+.caj, * [class*=caj-] {
+    display : inline-flex;
+    position: relative;
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+     vertical-align: middle;
+}
+/* sub texto */
+.sub-tex {
+    font-family: inherit;
+    font-size  : 0.70em;
+    color      : inherit;
+}   .sub-tex:before {
+        content: " ";
+    }
+.caj-enlin-tip {
+    padding: .025rem 1.8rem .025rem .55rem;
+}
+.caj-cod,
+.caj-borde,
+.caj-etiqueta {
+    padding      : 0 .55rem;
+    border       : 1px solid;
+    border-radius: .3rem;
+}
+
+.caj-cod {
+    background-color: #EEEEEE;
+    color           : #506976;
+    border-color    : #D2D2D2;
+    font-family     : "consolas";
+}
+
+.caj-borde {
+    border-color: rgba(0,0,0,.2);
+}
+
+/* caj-etiqueta */
+.caj-etiqueta {
+    padding         : 0;
+    border-radius   : 10rem;
+    border          : 1px solid transparent;
+    background-color: #E8E8E8;
+    vertical-align: middle;
+}
+.caj-img,
+.caj-icono,
+.caj-avatar {
+    display: inline-flex;
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+    background-color: rgba(0,0,0,.065);
+    font-size: 1em;
+    border-radius: 50%;
+    width: 30px;
+    height: 30px;
+    overflow: hidden;
+}
+.caj-etiqueta .caj-tex {
+    padding: 3px 13px;
+}
+.caj-etiqueta .caj-btn {
+    margin-right: 13px;
+    font-size: .8em;
+    vertical-align: middle;
+}
+
+/*---------------------------------
+    CAJAS
+    |__ contenedor
+    |__ maximo ancho de caja
+    |__ Pocicionamiento de caja
+    |__ scroll Y X
+    |__ caja / cuerpo
+    |__ cajas flexibles / cuerpo
+    |__ cajas hijas / contenido
+    |__ empuje
+    |__ pantalla
+    |__ sep caja con bordes
+-----------------------------------*/
+
+
+
+/*---------------------------------
+    CAJA posiciones
+    |__ caja con posiciones especiales
+-----------------------------------*/
+.caja-flo-der {
+    float        : left;
+    margin-right : 2rem;
+    margin-bottom: 2rem;
+    position     : relative;
+    max-width    : 40%;
+}
+
+.caja-flo-izq {
+    float        : right;
+    margin-left  : 2rem;
+    margin-bottom: 2rem;
+    position     : relative;
+    max-width    : 40%;
+}
+
+.caja-fija-pant {
+    position: fixed !important;
+    top     : 0; left: 0;
+    height  : 100%;
+    width   : 100%;
+    margin  : 0;
+}
+.caja-fija-en {
+    position: fixed !important;
+    display : block;
+    width   : auto;
+}
+.caja-fija-tabl {
+    position: absolute !important;
+    top     : 0; left: 0;
+    display : block;
+    width   : 100%;
+    height  : 100%;
+}
+.caja-fija-den {
+    position: absolute !important;
+    display : block;
+    width   : auto;
+}
+/* posicionadores */
+.flo-der {
+    left: 100%;
+    top: 0 !important;
+}
+.flo-izq {
+    right: 100%;
+    top: 0 !important;
+}
+.pos-arr-der,
+.pos-arr-izq,
+.pos-arr {
+    top: 0;
+}
+.pos-arr-der,
+.pos-aba-der,
+.pos-der {
+    right: 0;
+}
+.pos-aba-der,
+.pos-aba-izq,
+.pos-aba {
+    bottom: 0;
+}
+.pos-arr-izq,
+.pos-aba-izq,
+.pos-izq {
+    left: 0;
+}
+/* caja pegajosa
+---------------------------*/
+.caja-pegajosa {
+    position: relative;
+    display : block;
+    width   : 100%;
+    top     : 0;
+    position: sticky;
+}
+.sep-arr {
+    top: 15px;
+}
+.sep-arr-1 {
+    top: 2rem;
+}
+.sep-arr-2 {
+    top: 4rem;
+}
+.sep-arr-3 {
+    top: 6rem;
+}
+
+/* caj oculta y revelador
+    vinculado con
+    - tabl-navegacion: sub menu oculto
+---------------------------*/
+.mostrar-caja {
+    display : inline-block;
+    position: relative;
+}
+.mostrar-caja-flot {
+    display: inline-block;
+}
+.evento-clic:checked ~ .caja-oculta-clic,
+.mostrar-caja-flo:hover > .caja-oculta,
+.mostrar-caja:hover > .caja-oculta {
+    visibility: visible;
+    opacity   : 1;
+}
+.evento-clic ~ .caja-oculta-clic,
+.caja-oculta {
+    position  : absolute !important;
+    visibility: hidden;
+    display   : block;
+    opacity   : 0;
+    z-index   : 1;
+}
+.sub-caja {
+    position: absolute !important;
+    display : block;
+    z-index : 1;
+}
+.sub-caja.caja-arr,
+.caja-oculta-clic.caja-arr,
+.caja-oculta.caja-arr {
+    bottom: 100%;
+}
+.sub-caja.caja-der,
+.caja-oculta-clic.caja-der,
+.caja-oculta.caja-der {
+    left: 100%;
+}
+.sub-caja.caja-aba,
+.caja-oculta-clic.caja-aba,
+.caja-oculta.caja-aba {
+    top: 100%;
+}
+.sub-caja.caja-izq,
+.caja-oculta-clic.caja-izq,
+.caja-oculta.caja-izq {
+    right: 100%;
+}
+.caja-oculta-clic.caja-der,
+.caja-oculta-clic.caja-izq {
+    top: 0;
+}
+.mostrar-caja-flo > .caja-oculta.flo-der,
+.mostrar-caja > .caja-oculta.flo-der {
+    left: 100%;
+    top: 0 !important;
+}
+.mostrar-caja-flo > .caja-oculta.flo-izq,
+.mostrar-caja > .caja-oculta.flo-izq {
+    right: 100%;
+    top: 0 !important;
+}
+
+.caja-salir-scroll {
+    position: fixed;
+    display : none;
+    height  : auto;
+    width   : auto;
+    bottom  : 1.25rem;
+    right   : 1.25rem;
+    z-index : 20;
+}
+
+
+
+/* caja mascara recorta el contenedor
+y no muestra scroll dentro del mismo*/
+.caja-mascara {
+    overflow: hidden;
+}
+
+/* caja posicion z
+---------------------------*/
+.pos-z1 {
+    z-index: 1;
+}
+.pos-z2 {
+    z-index: 2;
+}
+.pos-z3 {
+    z-index: 3;
+}
+.z-fija-en {
+    z-index: 10;
+    position: fixed !important;
+    top: 0;
+    left: 0;
+}
+.z-fija-den {
+    z-index : 10;
+    position: absolute !important;
+    top     : 0;
+    left    : 0;
+}
+/*-------------------------------
+ANILLO para pantalla de carga
+----------------------------*/
+#pantalla-carga {
+    background-color: #F4F6FA;
+    z-index         : 20;
+}
+
+.anillo-carga {
+    border          : 3px solid rgba(205,205,205,.3);
+    height          : 30px; width: 30px;
+    border-top-color: #fff;
+    border-radius   : 100%;
+    position        : relative;
+    display         : block;
+
+    -webkit-animation: animacion-anillo 600ms linear infinite;
+    -o-animation: animacion-anillo 600ms linear infinite;
+    animation: animacion-anillo 600ms linear infinite;
+}
+@keyframes animacion-anillo {
+    from {transform: rotate(-30deg);}
+    to {transform: rotate(330deg);}
+}
+
+
+video {
+    width: 100%;
+}
+
+
+
+/*---------------------------------
+    Esqueleto
+    |__ contenedor
+    |__ bloque
+    |__ flexi
+    |__ celdas
+-----------------------------------*/
+
+
+/*
+contenedor pantalla*/
+.pant-peq,
+.pant-med,
+.pant-gra,
+.pant-xgra {
+    position: relative;
+    width: 100%;
+}
+.pant-peq {
+    min-height: 20rem;
+}
+.pant-med {
+    min-height: 30rem;
+}
+.pant-gra {
+    min-height: 40rem;
+}
+.pant-xgra {
+    min-height: 50rem;
+}
+
+/*
+contenedores principales que componen el cuerpo y bloques de pagina*/
+.contenedor,
+.bloque,
+.bloque-cen,
+.bloque-der {
+    position    : relative;
+    margin-left : auto;
+    margin-right: auto;
+    width       : 100%;
+}
+.bloque:after,
+.bloque-cen:after,
+.bloque-der:after {
+    content: "";
+    display: table;
+    clear  : both;
+}
+.contenedor > .flexi,
+.contenedor > [class*=flexi-] {
+    margin-left : auto;
+    margin-right: auto;
+}
+
+
+/* CAJAS contenedores flexible
+--------------------------*/
+* [class*=flexi-],.flexi {
+    display: -webkit-flex;
+    display: -webkit-box;
+    display: -ms-flexbox;
+    display: flex;
+    -webkit-flex-wrap: wrap;
+        -ms-flex-wrap: wrap;
+            flex-wrap: wrap;
+    width: 100%;
+}
+
+.flexi-enlinea {
+    display: -webkit-inline-flex;
+    display: inline-flex;
+    width: auto;
+}
+
+.flexi-nowrap {
+    -webkit-flex-wrap: nowrap;
+        -ms-flex-wrap: nowrap;
+            flex-wrap: nowrap;
+}
+
+
+/* CONTENEDORES Flexibles
+--------------------------*/
+
+.flexi-col-rev {
+    -webkit-flex-direction: column-reverse;  
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; 
+}
+.flexi-rev {
+    -webkit-flex-direction: row-reverse; 
+        -ms-flex-direction: row-reverse;  
+            flex-direction: row-reverse; 
+}
+.flexi-col,
+.flexi-centro-col {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.flexi-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.flexi-centro {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.flexi-centro-col {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.flexi-mitad {
+    -ms-align-items: center;
+        align-items: center;
+}
+.flexi-mitad-der {
+  justify-content: flex-end;
+    -ms-align-items: center;
+        align-items: center;
+}
+.flexi-just {
+    justify-content: space-between;
+}
+.flexi-ajust {
+    justify-content: space-around;
+}
+.flexi-der {
+    justify-content: flex-end;
+}
+.flexi-medio {
+    justify-content: center;
+}
+.flexi-final {
+    align-items: flex-end;
+}
+.flexi-baselineal {
+    -ms-align-items: baseline;
+    align-items: baseline;
+}
+.flexi-estrecho,
+.flexi-grupo {
+    -ms-align-items: stretch;
+    align-items    : stretch;
+}
+    .flexi-grupo > [class*=cel-] {
+        width: none !important;
+        flex-grow: 1;
+    }
+
+
+/* Ajuste de celdas
+--------------------------*/
+.cel-ajust,
+* [class*=cel-] {
+    position: relative;
+    float   : left;
+}
+
+/* celdas flexibles
+--------------------------*/
+.flexi > [class*=cel-],
+* [class*=flexi-] > [class*=cel-] {
+    position: relative;
+    -webkit-box-flex: 0;
+        -ms-box-flex: 0;
+            box-flex: 0;
+}
+
+/* celdas flotantes
+-----------------------------------*/
+.bloque-cen > [class*=cel-],
+.bloque-der > [class*=cel-],
+.bloque > [class*=cel-] {
+    margin-left : auto;
+    position    : relative;
+    margin-right: auto;
+    -webkit-box-flex: none;
+        -ms-box-flex: none;
+            box-flex: none;
+}
+
+.bloque-der > [class*=cel-] {
+    float: right;
+}
+
+.bloque-cen > [class*=cel-] {
+    float: none;
+    clear: both;
+}
+
+
+.an-1024px {
+    max-width: 1024px;
+}
+.an-1280px {
+    max-width: 1280px;
+}
+.an-1420px {
+    max-width: 1420px;
+}
+
+.cubrir {
+    width: 100%;
+    height: 100%;
+}
+
+.lg-25 {
+    height: 25%;}
+.lg-50 {
+    height: 50%;}
+.lg-75 {
+    height: 75%;}
+.lg-100 {
+    height: 100%;}
+.lg-pant {
+    min-height: 100vh;
+}
+
+/* anchos en pixeles */
+.an-250px {
+    width: 250px;
+}
+.an-300px {
+    width: 300px;
+}
+.an-350px {
+    width: 350px;
+}
+
+
+.an-20 {
+    width: 20%;}
+.an-25 {
+    width: 25%;}
+.an-30 {
+    width: 30%;}
+.an-33 {
+    width: 33.3333%;}
+.an-35 {
+    width: 35%;}
+.an-40 {
+    width: 40%;}
+.an-45 {
+    width: 45%;}
+.an-50 {
+    width: 50%;}
+.an-55 {
+    width: 55%;}
+.an-60 {
+    width: 60%;}
+.an-65 {
+    width: 65%;}
+.an-70 {
+    width: 70%;}
+.an-75 {
+    width: 75%;}
+.an-80 {
+    width: 80%;}
+.an-85 {
+    width: 85%;}
+.an-90 {
+    width: 90%;}
+.an-95 {
+    width: 95%;}
+.an-100 {
+    width: 100%;}
+.an-pant {
+    width: 100vw;
+}
+
+.cel-0 {
+    width: auto; 
+    height: auto;
+}
+
+.cel-1   {
+    width: 8.333333%;}
+.cel-2   {
+    width: 16.666667%;}
+.cel-25  {
+    width: 20%;}
+.cel-3   {
+    width: 25%;}
+.cel-4   {
+    width: 33.3333%;}
+.cel-5   {
+    width: 41.666667%;}
+.cel-6   {
+    width: 50%;}
+.cel-7   {
+    width: 58.333333%;}
+.cel-8   {
+    width: 66.666667%;}
+.cel-9   {
+    width: 75%;}
+.cel-10  {
+    width: 83.333333%;}
+.cel-11  {
+    width: 91.666667%;}
+.cel-12  {
+    width: 100%; float: none;}
+
+.empuj-1   {
+    left: 8.333333%;}
+.empuj-2   {
+    left: 16.666667%;}
+.empuj-25  {
+    left: 20%;}
+.empuj-3   {
+    left: 25%;}
+.empuj-4   {
+    left: 33.3333%;}
+.empuj-5   {
+    left: 41.666667%;}
+.empuj-6   {
+    left: 50%}
+.empuj-7   {
+    left: 58.333333%;}
+.empuj-8   {
+    left: 66.666667%;}
+.empuj-9   {
+    left: 75%;}
+.empuj-10  {
+    left: 83.333333%;}
+.empuj-11  {
+    left: 91.666667%;}
+.empuj-12  {
+    left: 100%;}
+
+.cel-pos-1 {
+    -webkit-order: -1;
+        -ms-order: -1;
+         -o-order: -1;
+            order: -1;
+}
+
+
+.visible    {display: block !important;}
+.no-visible {display: none !important;}
+
+
+/*------------------------
+*   RESOLUCION 1280
+*-------------------------*/
+
+@media screen and (min-width: 1024px)
+              and (max-width: 1280px){
+
+/* CONTENEDORES Flexibles
+--------------------------*/
+.es-col-rev {
+    -webkit-flex-direction: column-reverse;  
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; 
+}
+.es-rev {
+    -webkit-flex-direction: row-reverse; 
+        -ms-flex-direction: row-reverse;  
+            flex-direction: row-reverse; 
+}
+.es-col {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.es-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.es-centro {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.es-centro-col {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.es-mitad {
+    -ms-align-items: center;
+        align-items: center;
+}
+.es-mitad-der {
+  justify-content: flex-end;
+    -ms-align-items: center;
+        align-items: center;
+}
+.es-just {
+    justify-content: space-between;
+}
+.es-ajust {
+    justify-content: space-around;
+}
+.es-der {
+    justify-content: flex-end;
+}
+.es-medio {
+    justify-content: center;
+}
+.es-final {
+    align-items: flex-end;
+}
+.es-baselineal {
+    -ms-align-items: baseline;
+    align-items: baseline;
+}
+.es-grupo {
+    -ms-align-items: stretch;
+    align-items: stretch;
+}
+.es-grupo > [class*=cel-] {
+        width: none !important;
+        flex-grow: 1;
+    }
+
+.es-1   {
+    width: 8.333333%;}
+.es-2   {
+    width: 16.666667%;}
+.es-25  {
+    width: 20%;}
+.es-3   {
+    width: 25%;}
+.es-4   {
+    width: 33.3333%;}
+.es-5   {
+    width: 41.666667%;}
+.es-6   {
+    width: 50%;}
+.es-7   {
+    width: 58.333333%;}
+.es-8   {
+    width: 66.666667%;}
+.es-9   {
+    width: 75%;}
+.es-10  {
+    width: 83.333333%;}
+.es-11  {
+    width: 91.666667%;}
+.es-12  {
+    width: 100%; float: none;}
+
+.es-pos-1 {
+    -webkit-order: -1;
+        -ms-order: -1;
+         -o-order: -1;
+            order: -1;
+}
+
+.visible-es     {display: block !important;}
+.no-visible-es  {display: none !important;}
+
+}/*fin screen 1280--*/
+
+
+/*------------------------
+*   RESOLUCION 1024
+*-------------------------*/
+@media screen and (min-width: 768px)
+              and (max-width: 1024px){
+
+/* CONTENEDORES Flexibles
+--------------------------*/
+.tb-col-rev {
+    -webkit-flex-direction: column-reverse;  
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; 
+}
+.tb-rev {
+    -webkit-flex-direction: row-reverse; 
+        -ms-flex-direction: row-reverse;  
+            flex-direction: row-reverse; 
+}
+.tb-col {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.tb-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.tb-centro {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.tb-centro-col {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.tb-mitad {
+    -ms-align-items: center;
+        align-items: center;
+}
+.tb-mitad-der {
+  justify-content: flex-end;
+    -ms-align-items: center;
+        align-items: center;
+}
+.tb-just {
+    justify-content: space-between;
+}
+.tb-ajust {
+    justify-content: space-around;
+}
+.tb-der {
+    justify-content: flex-end;
+}
+.tb-medio {
+    justify-content: center;
+}
+.tb-final {
+    align-items: flex-end;
+}
+.tb-baselineal {
+    -ms-align-items: baseline;
+    align-items: baseline;
+}
+.tb-grupo {
+    -ms-align-items: stretch;
+    align-items: stretch;
+}
+.tb-grupo > [class*=cel-] {
+        width: none !important;
+        flex-grow: 1;
+    }
+
+.tb-1   {
+    width: 8.333333%;}
+.tb-2   {
+    width: 16.666667%;}
+.tb-25  {
+    width: 20%;}
+.tb-3   {
+    width: 25%;}
+.tb-4   {
+    width: 33.3333%;}
+.tb-5   {
+    width: 41.666667%;}
+.tb-6   {
+    width: 50%;}
+.tb-7   {
+    width: 58.333333%;}
+.tb-8   {
+    width: 66.666667%;}
+.tb-9   {
+    width: 75%;}
+.tb-10  {
+    width: 83.333333%;}
+.tb-11  {
+    width: 91.666667%;}
+.tb-12  {
+    width: 100%; float: none;}
+
+.tb-pos-1 {
+    -webkit-order: -1;
+        -ms-order: -1;
+         -o-order: -1;
+            order: -1;
+}
+
+.visible-tb     {display: block !important;}
+.no-visible-tb  {display: none !important;}
+
+}/*fin screen 1024--*/
+
+
+/*------------------------
+*   RESOLUCION 768
+*-------------------------*/
+@media screen and (min-width: 480px)
+              and (max-width: 768px){
+
+/* CONTENEDORES Flexibles
+--------------------------*/
+.sp-col-rev {
+    -webkit-flex-direction: column-reverse;
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse;
+}
+.sp-rev {
+    -webkit-flex-direction: row-reverse;
+        -ms-flex-direction: row-reverse;
+            flex-direction: row-reverse;
+}
+.sp-col {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.sp-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.sp-centro {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.sp-centro-col {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.sp-mitad {
+    -ms-align-items: center;
+        align-items: center;
+}
+.sp-mitad-der {
+  justify-content: flex-end;
+    -ms-align-items: center;
+        align-items: center;
+}
+.sp-just {
+    justify-content: space-between;
+}
+.sp-ajust {
+    justify-content: space-around;
+}
+.sp-der {
+    justify-content: flex-end;
+}
+.sp-medio {
+    justify-content: center;
+}
+.sp-final {
+    align-items: flex-end;
+}
+.sp-baselineal {
+    -ms-align-items: baseline;
+    align-items: baseline;
+}
+.sp-grupo {
+    -ms-align-items: stretch;
+    align-items: stretch;
+}
+.sp-grupo > [class*=cel-] {
+        width: none !important;
+        flex-grow: 1;
+    }
+
+.sp-1   {
+    width: 8.333333%;}
+.sp-2   {
+    width: 16.666667%;}
+.sp-25  {
+    width: 20%;}
+.sp-3   {
+    width: 25%;}
+.sp-4   {
+    width: 33.3333%;}
+.sp-5   {
+    width: 41.666667%;}
+.sp-6   {
+    width: 50%;}
+.sp-7   {
+    width: 58.333333%;}
+.sp-8   {
+    width: 66.666667%;}
+.sp-9   {
+    width: 75%;}
+.sp-10  {
+    width: 83.333333%;}
+.sp-11  {
+    width: 91.666667%;}
+.sp-12  {
+    width: 100%; float: none;}
+
+.sp-pos-1 {
+    -webkit-order: -1;
+        -ms-order: -1;
+         -o-order: -1;
+            order: -1;
+}
+
+.visible-sp     {display: block !important;}
+.no-visible-sp  {display: none !important;}
+
+}/*fin screen 768--*/
+
+
+/*------------------------
+*   RESOLUCION 480
+*-------------------------*/
+
+@media screen and (min-width: 0px)
+              and (max-width: 480px){
+
+/* CONTENEDORES Flexibles
+--------------------------*/
+.mv-col-rev {
+    -webkit-flex-direction: column-reverse;  
+        -ms-flex-direction: column-reverse;
+            flex-direction: column-reverse; 
+}
+.mv-rev {
+    -webkit-flex-direction: row-reverse; 
+        -ms-flex-direction: row-reverse;  
+            flex-direction: row-reverse; 
+}
+.mv-col {
+    -webkit-flex-direction: column;
+        -ms-flex-direction: column;
+            flex-direction: column;
+}
+.mv-row {
+    -webkit-flex-direction: row;
+        -ms-flex-direction: row;
+            flex-direction: row;
+}
+.mv-centro {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.mv-centro-col {
+    justify-content: center;
+    -ms-align-items: center;
+        align-items: center;
+}
+.mv-mitad {
+    -ms-align-items: center;
+        align-items: center;
+}
+.mv-mitad-der {
+  justify-content: flex-end;
+    -ms-align-items: center;
+        align-items: center;
+}
+.mv-just {
+    justify-content: space-between;
+}
+.mv-ajust {
+    justify-content: space-around;
+}
+.mv-der {
+    justify-content: flex-end;
+}
+.mv-medio {
+    justify-content: center;
+}
+.mv-final {
+    align-items: flex-end;
+}
+.mv-baselineal {
+    -ms-align-items: baseline;
+    align-items: baseline;
+}
+.mv-grupo {
+    -ms-align-items: stretch;
+    align-items: stretch;
+}
+.mv-grupo > [class*=cel-] {
+        width: none !important;
+        flex-grow: 1;
+    }
+
+.mv-1   {
+    width: 8.333333%;}
+.mv-2   {
+    width: 16.666667%;}
+.mv-25  {
+    width: 20%;}
+.mv-3   {
+    width: 25%;}
+.mv-4   {
+    width: 33.3333%;}
+.mv-5   {
+    width: 41.666667%;}
+.mv-6   {
+    width: 50%;}
+.mv-7   {
+    width: 58.333333%;}
+.mv-8   {
+    width: 66.666667%;}
+.mv-9   {
+    width: 75%;}
+.mv-10  {
+    width: 83.333333%;}
+.mv-11  {
+    width: 91.666667%;}
+.mv-12  {
+    width: 100%; float: none;}
+
+.mv-pos-1 {
+    -webkit-order: -1;
+        -ms-order: -1;
+         -o-order: -1;
+            order: -1;
+}
+
+.visible-mv     {display: block !important;}
+.no-visible-mv  {display: none !important;}
+
+    /*.caja {max-width: 100%;margin: 0 auto; padding: auto;} --en prueva*/
+
+}/*fin screen 480--*/
+
+
+
+/*---------------------------------
+    AJUSTES de
+    |__ margenes
+    |__ relleno
+-----------------------------------*/
+
+/* relleno
+---------------------------*/
+.rell-0 {
+    padding: 0 !important;
+}
+.rell-1 {
+    padding: 15px !important;
+}
+.rell-fluid {
+    padding-left: 15px;
+    padding-right: 15px;
+}
+
+/* margenes separacion
+---------------------------*/
+.marg-aba-0 {
+    margin-bottom: 0 !important;
+}
+.marg-arr-0 {
+    margin-top: 0 !important;
+}
+.dividir,
+.marg-0 {
+    margin: 0 !important;
+}
+.marg-aba-peq {
+    margin-bottom: .5em;
+}
+.marg-sep-1,
+.marg-aba-1 {
+    margin-bottom: 1em;
+}
+.marg-sep-2,
+.marg-aba-2 {
+    margin-bottom: 2.4em;
+}
+.marg-sep-3,
+.marg-aba-3 {
+    margin-bottom: 3.8em;
+}
+.marg-sep-4,
+.marg-aba-4 {
+    margin-bottom: 5em;
+}
+.marg-arr-1,
+.marg-sep-1 {
+    margin-top: 1em;
+}
+.marg-arr-2,
+.marg-sep-2 {
+    margin-top: 2.4em;
+}
+.marg-arr-3,
+.marg-sep-3 {
+    margin-top: 3.8em;
+}
+.marg-arr-4,
+.marg-sep-4 {
+    margin-top: 5em;
+}
+
+@media screen and (min-width: 1024px)
+              and (max-width: 1280px){
+.padd-0-es {
+    padding: 0 !important;
+}
+
+}
+@media screen and (min-width: 768px)
+              and (max-width: 1024px){
+.padd-0-tb {
+    padding: 0 !important;
+}
+
+}
+@media screen and (min-width: 480px)
+              and (max-width: 768px){
+.padd-0-sp {
+    padding: 0 !important;
+}
+
+}
+@media screen and (min-width: 0px)
+              and (max-width: 480px){
+.padd-0-mv {
+    padding: 0 !important;
+}
+
+}
+
+
+/*---------------------------------
+    Botones.
+-----------------------------------*/
+/*tabl-navegacion
+  |__ ajust reseteo
+-----------------------------*/
+
+* [class*=boton-],.boton {
+    background-color: #3C4659;
+    text-decoration : none;
+    display         : inline-block;
+    vertical-align  : middle;
+    border-radius   : .25rem;
+    position        : relative;
+    text-align      : center;
+    overflow        : hidden;
+    cursor          : pointer;
+    color           : #fff;
+    border          : none;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+    -webkit-box-shadow: 0 0 1px 1px rgba(0,0,0,.2);
+            box-shadow: 0 0 1px 1px rgba(0,0,0,.2);
+
+    /* tamanho defecto*/
+    border : 1px solid transparent;
+    padding: 0.5625rem 1.2rem;
+    font-size: 1rem;
+}
+.efecto-clic {
+    overflow        : hidden;
+    display         : inline-block;
+    position        : relative;
+    -webkit-user-select: none;
+       -moz-user-select: none;
+        -ms-user-select: none;
+}
+.efecto-clic:after,
+* [class*=boton-]:after,
+.boton:after {
+    content: "";
+    border-radius: 100%;
+    position: absolute;
+    display: block;
+    height: 30px;
+    width: 30px;
+    top: calc(50% - 15px);
+    left: calc(50% - 15px);
+    background-color: rgba(255,255,255,.15);
+    opacity: 0;
+    visibility: hidden;
+    -webkit-transform: scale(15);
+        -ms-transform: scale(15);
+         -o-transform: scale(15);
+            transform: scale(15);
+    -webkit-transition: all 1.85s ease-out;
+         -o-transition: all 1.85s ease-out;
+            transition: all 1.85s ease-out;
+}
+/* ebento clic es un input tipo checkbox que realiza un evento
+al siguiente objeto */
+input[type=checkbox].evento-clic {
+    cursor: pointer;
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%; height: 100%;
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+.efecto-clic.efecto-neg:after,
+* [class*=boton-].efecto-neg:after,
+.boton.efecto-neg:after {
+    background-color: rgba(182,182,182,.25);
+}
+.efecto-clic:active:after,
+* [class*=boton-]:active:after,
+.boton:active:after {
+    opacity: 1;
+    visibility: visible;
+    -webkit-transform: scale(0);
+        -ms-transform: scale(0);
+         -o-transform: scale(0);
+            transform: scale(0);
+    -webkit-transition-duration: 0s;
+         -o-transition-duration: 0s;
+            transition-duration: 0s;
+}
+.boton-archivo input[type=file] {
+    position: absolute;
+    top: 0;
+    left: 0;
+    cursor: pointer;
+    width: 100%;
+    height: 100%;
+    opacity: 0;
+}
+* [class*=boton-][type=checkbox],.boton[type=checkbox] {
+    -webkit-appearance: none;
+       -moz-appearance: none;
+            appearance: none;
+}
+* [class*=boton-]:hover,.boton:hover {
+    background-color: #333C4D;
+    -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px -1px rgba(0, 0, 0, 0.2);
+            box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px -1px rgba(0, 0, 0, 0.2);
+}
+
+a.boton:hover,a[class*=boton-]:hover {
+    text-decoration: none; color: #fff;
+}
+.boton-red {
+    border-radius: 10rem;
+}
+.boton-red.gra,
+.boton.gra {
+    padding: 0.8125rem 1.8rem !important;
+    font-size: 1.3rem !important;
+}
+.boton-red.peq,
+.boton.peq {
+    padding: 0.375rem .8rem;
+    font-size: .8rem;
+}
+
+.boton-cua,
+.boton-cir {
+    padding: 0 !important;
+    border-radius: 0;
+    width: 2.8rem; height: 2.8rem;
+    font-size: 1.2rem;
+    display: inline-flex;
+    -ms-align-items: center;
+        align-items: center;
+    justify-content: center;
+}
+.boton-cir {
+    border-radius: 100em;
+}
+.boton-cua.peq,
+.boton-cir.peq {
+    width: 2.2rem; height: 2.2rem;
+    font-size: .9rem;
+}
+.boton-cua.gra,
+.boton-cir.gra {
+    width: 3.5rem; height: 3.5rem;
+    font-size: 1.5rem;
+}
+/* ajustar el icono en boton
+segun su ubicacion dentro del boton colocar la
+etiqueta correspondiente */
+* [class*=boton] .i-izq,
+* [class*=boton] .i-der {
+    vertical-align: center;
+    display: inline-block;
+}
+.i-der {
+    margin-left: .5em;
+}
+.boton .i-der,
+* [class*=boton-] .i-der {
+    margin-left: .8em;
+}
+.i-izq {
+    margin-right: .5em;
+}
+.boton .i-izq,
+* [class*=boton-] .i-izq {
+    margin-right: .8em;
+}
+
+
+* [class*=boton].animar-i:hover i {
+    -webkit-animation-duration: 300ms;
+            animation-duration: 300ms;
+    -webkit-animation-fill-mode: both;
+            animation-fill-mode: both;
+    -webkit-animation-timing-function: ease-out;
+            animation-timing-function: ease-out;
+    animation-name: animar_i;
+}
+
+@keyframes animar_i {
+  from {
+    opacity: 1;
+    transform: translateY(0);
+  }
+  50% {
+    opacity: 0;
+    transform: translateY(0.625rem);
+  }
+  51% {
+    opacity: 0;
+    transform: translateY(-0.625rem);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+/*---------------------------------
+    Nevegacion.
+-----------------------------------*/
+/*Reset nav ul ol
+  |__ ajust reseteo para navegacion y lista
+-----------------------------*/
+ul,ol {
+    list-style: none;
+    list-style-position: inside;
+}
+ul li > a,
+ol li > a,
+nav li > a {
+    text-decoration: none;
+}
+ul li > a:hover,
+ol li > a:hover,
+nav li > a:hover {
+    text-decoration: none;
+}
+
+/* vinetas para listas vertical */
+ul.vin-cir {
+    list-style-type: circle;
+}
+ul.vin-cua {
+    list-style-type: square;
+}
+ol.num-rom {
+    list-style-type: upper-roman;
+}
+ol.vin-dis {
+    list-style-type: disc;
+}
+ol.let-alf {
+    list-style-type: lower-alpha;
+}
+
+/* lista ul */
+.lista-hor > li {
+    position: relative;
+    display: inline-block;
+}
+.lista-ver li {
+    position: relative;
+    display: block;
+    margin-bottom: .5em;
+}
+
+/* DETALLES de ruta  [ejemp/ ruta 1 / tuta 2]
+    lista orizontal dividida con barra inclinada o recta
+---------------------------*/
+.tabl-ruta a {color: inherit;}
+.tabl-ruta a:hover {
+    opacity: .75;
+}
+.tabl-ruta {
+    cursor: default;
+    padding: 8px 15px;
+    list-style: none;
+    border-radius: 4px;
+}
+.tabl-ruta li + li:before,
+.sep-barr-ver li + li:before,
+.sep-barr-med li + li:before,
+.sep-barr-in li + li:before {
+    padding: 0 9px;
+    content: "/";
+    font-size: 1.15em;
+    opacity: .65;
+    position: relative;
+}
+.sep-barr-ver li + li:before {
+    content: "|" !important;
+}
+.li-barr-med li:before,
+.sep-barr-med li + li:before {
+    content: "-" !important;
+}
+.li-barr-med li:before {
+    margin-right: .8rem;
+}
+.lista-hor.sep-li-marg li + li {
+    margin-left: 15px;
+}
+.sep-li-marg li + li {
+    margin-top: .5rem;
+}
+.lista-ver.est-lin-med li:before {
+    content: "-";
+    margin-right: .5em;
+}
+
+li.sin-detalle:before {
+    content: none !important;
+}
+
+.lista-i i {
+    margin-right: 15px;
+    display: inline-block;
+    -webkit-transform: scale(1.05) translateY(.008em);
+        -ms-transform: scale(1.05) translateY(.008em);
+         -o-transform: scale(1.05) translateY(.008em);
+            transform: scale(1.05) translateY(.008em);
+}
+
+/* decoracion cuadro o circular */
+.dec-cir li:before,
+.dec-cua li:before {
+    content: '';
+    display: inline-block;
+    width: 6px;
+    height: 6px;
+    background-color: currentColor;
+    margin-right: 1rem;
+}
+.dec-cir li:before {
+    border-radius: 10px;
+}
+.dec-cir .no-dec li:before,
+.dec-cua .no-dec li:before {
+    content: none !important;
+}
+
+/* li titulo */
+.lista-ver .li-titulo {
+    font-weight: bold;
+    padding-left: 1rem;
+    border-left: 3px solid currentColor;
+}   .lista-ver .li-titulo:before {
+        content: none;
+    }
+
+
+.empuj-lista {
+    margin-left: 2rem;
+    margin-top: .5rem;
+    margin-bottom: .5rem;
+}
+
+.linea-grupo ul {
+    border-left: 1px solid currentColor;
+    padding-left: 2rem;
+    margin: 0;
+}
+/*---------------------------------
+    MENU generador.
+-----------------------------------*/
+
+
+
+
+
+
+
+/*---------------------------------
+    Trancicion y decoraciones.
+-----------------------------------*/
+
+* [class*=boton-],.boton,
+.tabl-navegacion li,
+.caja-oculta {
+    -webkit-transition: all 200ms ease-out;
+         -o-transition: all 200ms ease-out;
+            transition: all 200ms ease-out;
+}
+#pantalla-carga,
+* [class*=cel-] {
+    -webkit-transition: all 300ms ease-out;
+         -o-transition: all 300ms ease-out;
+            transition: all 300ms ease-out;
+}
+
+
+/*---------------------------------
+    flecha decorativa borde
+-----------------------------------*/
+.flecha-arr:before,
+.flecha-der:before,
+.flecha-aba:before,
+.flecha-izq:before {
+    position: absolute;
+    border-style: solid;
+    content: "";
+    height: 0;
+    width: 0;
+    border-color: transparent;
+}
+.flecha-arr:before {
+    top: -10px;
+    left: calc(50% - 10px);
+    border-width: 0 10px 10px 10px;
+    border-bottom-color: #fff;
+}
+.flecha-izq:before {
+    left: -10px;
+    top: calc(50% - 10px);
+    border-width: 10px 10px 10px 0;
+    border-right-color: #fff;
+}
+.flecha-aba:before {
+    bottom: -10px;
+    left: calc(50% - 10px);
+    border-width: 10px 10px 0 10px;
+    border-top-color: #fff;
+}
+.flecha-der:before {
+    right: -10px;
+    top: calc(50% - 10px);
+    border-width: 10px 0 10px 10px;
+    border-left-color: #fff;
+}
+
+
+
+/*---------------------------------
+    punta flecha personalizabe caja
+-----------------------------------*/
+.punta-arr:before,
+.punta-der:before,
+.punta-aba:before,
+.punta-izq:before {
+    content: "";
+    width: 14px; height: 14px;
+    background-color: #ffffff;
+    position: absolute;
+    border: 1px solid;
+    border-color: transparent;
+    display: block;
+    z-index: 1;
+    -webkit-transform: rotate(45deg);
+        -ms-transform: rotate(45deg);
+         -o-transform: rotate(45deg);
+            transform: rotate(45deg);
+}
+.punta-arr:before {
+    left: calc(50% - 7px); top: -7px;
+    border-width: 1px 0 0 1px;
+}
+.punta-izq:before {
+    left: -7px; top: calc(50% - 7px);
+    border-width: 0 0 1px 1px;
+}
+.punta-aba:before {
+    left: calc(50% - 7px); bottom: -7px;
+    border-width: 0 1px 1px 0;
+}
+.punta-der:before {
+    right: -7px; top: calc(50% - 7px);
+    border-width: 1px 1px 0 0;
+}
+
+
+.bloq-burbuja.punta-aba:before {
+    background-color: #3D3D3D;
+    width: 8px; height: 8px;
+    left: calc(50% - 4px); bottom: -3px;
+}
+/*---------------------------------
+    Reseteo de flechas aplicadas
+-----------------------------------*/
+.tabl-navegacion .punta-aba:before,
+.tabl-navegacion .punta-arr:before {
+    left: 25px;
+    z-index: -1;
+}
+/*---------------------------------
+    efecto de aparicion
+    |__ anima los sub contenedores ocultos
+    on efecto de aparicion
+-----------------------------------*/
+.evento-clic ~ .caja-oculta-clic {
+    -webkit-transition: all ease-out 250ms;
+         -o-transition: all ease-out 250ms;
+            transition: all ease-out 250ms;
+}
+
+.evento-clic ~ .caja-oculta-clic.animac-aba,
+.animac-aba > .caja-oculta {
+    -webkit-transform: translateY(15px);
+    -ms-transform: translateY(15px);
+    -o-transform: translateY(15px);
+    transform: translateY(15px);
+}
+
+.evento-clic ~ .caja-oculta-clic.animac-arr,
+.animac-arr > .caja-oculta {
+    -webkit-transform: translateY(-15px);
+    -ms-transform: translateY(-15px);
+    -o-transform: translateY(-15px);
+    transform: translateY(-15px);
+}
+
+.evento-clic ~ .caja-oculta-clic.animac-der,
+.animac-der > .caja-oculta {
+    -webkit-transform: translateX(15px);
+    -ms-transform: translateX(15px);
+    -o-transform: translateX(15px);
+    transform: translateX(15px);
+}
+
+.evento-clic ~ .caja-oculta-clic.animac-izq,
+.animac-izq > .caja-oculta {
+    -webkit-transform: translateX(-15px);
+    -ms-transform: translateX(-15px);
+    -o-transform: translateX(-15px);
+    transform: translateX(-15px);
+}
+
+
+.evento-clic:checked ~ .caja-oculta-clic.animac-arr,
+.evento-clic:checked ~ .caja-oculta-clic.animac-der,
+.evento-clic:checked ~ .caja-oculta-clic.animac-aba,
+.evento-clic:checked ~ .caja-oculta-clic.animac-izq,
+.animac-der:hover > .caja-oculta,
+.animac-izq:hover > .caja-oculta,
+.animac-aba:hover > .caja-oculta,
+.animac-arr:hover > .caja-oculta {
+    -webkit-transform: translate(0);
+    -ms-transform: translate(0);
+    -o-transform: translate(0);
+    transform: translate(0);
+}
+
+
+/*---------------------------------
+    Normalizar predefinido importante
+    |__ caja borde
+    |__ no sleccionar
+-----------------------------------*/
+
+.bloq-boton,
+* [class*=boton-],.boton,
+* [class*=flexi-],.flexi,
+* [class*=cel-],
+.contenedor,
+.bloque,
+.bloque-cen,
+.bloque-der,
+.tabl,* [class*=tabl-],
+.cart,* [class*=cart-],
+.tarj,* [class*=tarj-],
+.punta-arr:before,
+.punta-der:before,
+.punta-aba:before,
+.punta-izq:before   {
+    -webkit-box-sizing: border-box;
+       -moz-box-sizing: border-box;
+            box-sizing: border-box;
+}
+
+
+.bloq-burbuja   {
+    -webkit-user-select: none;
+       -moz-user-select: none;
+         -ms-user-select:none;
+}
+
+
+input[type=checkbox]:focus,
+button:focus {
+    outline: 0;
+}
+
+
+/* Redondeo de esquinas de contenedor
+---------------------------*/
+.redon-1 {
+    border-radius: 0.1875rem;
+}
+.redon-2 {
+    border-radius: 0.375rem;
+}
+.redon-3 {
+    border-radius: 0.625rem;
+}
+.redon-4 {
+    border-radius: 1.25rem;
+}
+.redon-red-der,
+.redon-red-izq,
+.redon-red {
+    border-radius: 100rem;
+}
+.redon-hoja-izq,
+.redon-hoja-der {
+    border-radius: 3rem;
+}
+.redon-red-der {
+    border-top-left-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.redon-red-izq {
+    border-top-right-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.redon-hoja-der {
+    border-top-left-radius: 0;
+    border-bottom-right-radius: 0;
+}
+.redon-hoja-izq {
+    border-top-right-radius: 0;
+    border-bottom-left-radius: 0;
+}
+.redon-cir {
+    border-radius: 100%;
+}
+.redon-0 {
+    border-radius: 0 !important;
+}
+
+
+
+/*Sombra de caja: varios tipos de sombreado para las cajas que puedes aplicar ne culaquier area
+---------------------------*/
+.sombra-1 {
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px -2px rgba(0, 0, 0, 0.12) !important;
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px -2px rgba(0, 0, 0, 0.12) !important;
+}
+.tabl-navegacion .caja-oculta,
+.sombra-2 {
+  -webkit-box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 7px -2px rgba(0, 0, 0, 0.12) !important;
+          box-shadow: 0 3px 4px 0 rgba(0, 0, 0, 0.14), 0 1px 7px -2px rgba(0, 0, 0, 0.12) !important;
+}
+.sombra-3 {
+  -webkit-box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px -1px rgba(0, 0, 0, 0.2) !important;
+          box-shadow: 0 4px 5px 0 rgba(0, 0, 0, 0.14), 0 1px 10px -1px rgba(0, 0, 0, 0.2) !important;
+}
+.caja-modal,
+.sombra-4 {
+  -webkit-box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0 6px 10px 0 rgba(0, 0, 0, 0.14), 0 1px 18px 0 rgba(0, 0, 0, 0.12), 0 3px 5px -1px rgba(0, 0, 0, 0.3) !important;
+}
+.sombra-5 {
+  -webkit-box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+          box-shadow: 0 8px 10px 1px rgba(0, 0, 0, 0.14), 0 3px 14px 2px rgba(0, 0, 0, 0.12), 0 5px 5px -3px rgba(0, 0, 0, 0.3) !important;
+}
+.sombra-0 {
+  -webkit-box-shadow: none !important;
+          box-shadow: none !important;
+  -webkit-text-shadow: none !important;
+          text-shadow: none !important;
+}

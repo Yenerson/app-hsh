@@ -1,0 +1,25 @@
+/* EVENTO CLIC
+---------------------------------
+modo sencillo para ocultar y desocultar sub-caja. no necesitas js
+*/
+.li-clic {
+	position: relative;
+	padding-right: 20px;
+}
+.evento-clic:checked ~ .caja-oculta {
+	opacity: 1;
+	visibility: visible;
+}
+.caja-navegacion .evento-clic:after {
+	content: '\002B';
+	color: inherit;
+	position: absolute;
+	height: 100%;
+	right: 15px;
+	display: flex;
+	-ms-align-items: center;
+		align-items: center;
+}
+.caja-navegacion .evento-clic:checked:after {
+	content: '\2212';
+}

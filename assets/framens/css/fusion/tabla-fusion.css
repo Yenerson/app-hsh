@@ -1,0 +1,75 @@
+
+.tabla {
+    border-collapse: collapse;
+    border-spacing: 0;
+    width: 100%;
+    max-width: 100%;
+    position: relative;
+    border: 1px solid rgba(0,0,0,0.1);
+    margin-bottom: 1rem;
+    display: table;
+}
+.tabla.alin-izq th,
+.tabla.alin-izq td {
+    text-align: left;
+}
+
+.tabla caption,
+.tabla th,.tabla td {
+    overflow: hidden;
+    text-align: center;
+    padding: 10px 15px;
+    -webkit-transition: all ease-out 200ms;
+         -o-transition: all ease-out 200ms;
+            transition: all ease-out 200ms;
+}
+.tabla.peq caption,
+.tabla.peq th,.tabla.peq td {
+    padding: 5px 15px;
+}
+.tabla caption {
+    border: 1px solid rgba(0,0,0,0.1);
+    border-bottom: 0;
+}
+.tabla thead tr {
+    border-bottom: 1px solid rgba(0,0,0,0.05);
+}
+.tabla tbody tr + tr {
+    border-top: 1px solid rgba(0,0,0,.05);
+}
+.tabla th:first-child,.tabla td:first-child {
+    text-align: left;
+}
+
+.tabla.estilo-1 tr:nth-child(even) {
+    background-color: rgba(0,0,0,0.05);
+}
+.tabla.estilo-2 th:nth-child(even),
+.tabla.estilo-2 td:nth-child(even) {
+    background-color: rgba(0,0,0,0.05);
+}
+
+
+.cursor-selec tr:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.cursor-selec tr td:hover {
+    background-color: rgba(0,0,0,.05);
+}
+
+
+.cursor-selec-2 tr:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.cursor-selec-2 tr:hover td:first-child {
+    background-color: rgba(0,0,0,.05);
+}
+
+
+.cursor-selec-3 tr:hover {
+    background-color: rgba(0,0,0,.05);
+}
+.cursor-selec-3 td:hover,
+.cursor-selec-3 tr:hover td:first-child {
+    background-color: rgba(0,0,0,.05);
+}

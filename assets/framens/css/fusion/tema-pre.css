@@ -1,0 +1,163 @@
+/*------------
+TEMA metal cia (defecto)
+===================================== importante */
+
+
+.tema-osc-pre:hover[class*=punta-]::before,
+.tema-osc-pre:hover,
+.tema-nav-pre .nav-titulo,
+.fondo-pre-o {
+	background-color: #D7781C !important;
+}
+.tema-osc-pre,
+.tema-nav-pre,
+.tema-pre[class*=punta-]::before,
+.tema-flu-pre[class*=punta-]::before,
+.tema-osc-pre[class*=punta-]::before,
+.tema-trans-pre:hover[class*=punta-]::before,
+.tema-pre,.tema-flu-pre,
+.fondo-pre {
+	background-color: #ff8a18 !important;
+}
+.tema-trans-pre,
+.tema-bt-pre,
+.tex-pre {
+	color:  #ff8a18 !important;
+}
+.fondo-pre-2 {
+	background-color: #FFCFA1 !important;
+}
+a.tex-pre:hover,
+.tex-pre-2 {
+	color:  #FFCFA1 !important;
+}	a.tex-pre:active {
+	color: #D7781C !important;
+}
+.tema-nav-pre .sub-nav > li:hover,
+.tema-est-pre[class*=punta-]::before,
+.tema-est-pre,
+.fondo-pre-s {
+	background-color: #E5EBEE !important;
+}
+.tex-pre-s {
+	color:  #E5EBEE !important;
+}
+
+/* borde color */
+.tema-trans-pre[class*=punta-]::before,
+.tema-est-pre[class*=punta-]::before,
+.tema-bt-pre[class*=punta-]::before,
+.borde-pre[class*=punta-]::before,
+.tema-trans-pre,
+.tema-est-pre,
+.tema-bt-pre,
+.bord-pre {
+	border-color: #ff8a18 !important;
+}
+.anillo-pre {
+	border-top-color: #ff8a18 !important;
+}
+
+/* fondo vidrio color */
+.vidrio-pre {
+	background-color: rgba(255, 138, 24, .5) !important;
+}
+
+/* tema gradiante color */
+.tema-gra-pre {
+	background: -webkit-linear-gradient( 45deg, #D7781C, #FFCFA1) !important;
+	background: -o-linear-gradient( 45deg, #D7781C, #FFCFA1) !important;
+	background: linear-gradient( 45deg, #D7781C, #FFCFA1) !important;
+}
+
+/* tema transicion */
+.tema-trans-pre {
+	border: 1px solid;
+}	.tema-trans-pre:hover {
+	background-color: #ff8a18 !important;
+}
+
+/* tema progreso-circular */
+.tema-bt-pre .bloq-circulo {
+	border-bottom-color: #ff8a18 !important;
+  	border-right-color: #ff8a18 !important;
+}
+
+.tema-osc-pre,
+.tema-osc-pre[class*=punta-]::before,
+.tema-trans-pre[class*=punta-]::before,
+a.tex-pre,
+.tema-trans-pre {
+	transition: all ease-out 200ms !important;
+}
+
+/* flecha tema */
+.tema-bt-pre.flecha-arr::before,
+.tema-est-pre.flecha-arr::before,
+.bord-pre.flecha-arr::before,
+.fle-pre.flecha-arr::before,
+.tema-pre.flecha-arr::before {
+	border-bottom-color: #ff8a18 !important;
+}
+.tema-bt-pre.flecha-der::before,
+.tema-est-pre.flecha-der::before,
+.bord-pre.flecha-der::before,
+.fle-pre.flecha-der::before,
+.tema-pre.flecha-der::before {
+	border-left-color: #ff8a18 !important;
+}
+.tema-bt-pre.flecha-aba::before,
+.tema-est-pre.flecha-aba::before,
+.bord-pre.flecha-aba::before,
+.fle-pre.flecha-aba::before,
+.tema-pre.flecha-aba::before {
+	border-top-color: #ff8a18 !important;
+}
+.tema-bt-pre.flecha-izq::before,
+.tema-est-pre.flecha-izq::before,
+.bord-pre.flecha-izq::before,
+.fle-pre.flecha-izq::before,
+.tema-pre.flecha-izq::before {
+	border-right-color: #ff8a18 !important;
+}
+/*------------ fin tema */
+
+
+/*
+importante
+
+AUTO AJUSTADO
+color fuente y borde segun el color de tema  */
+/* tex fondo blanco */
+.tema-osc-pre,
+.tex-a-pre li > a,
+.tema-nav-pre li,
+.tema-nav-pre li > a,
+.tema-trans-pre:hover,
+.tema-gra-pre,
+.tema-flu-pre,
+.tema-pre {
+	color: #ffffff !important;
+}
+
+.tema-trans-pre {
+	background-color: #ffffff !important;
+}
+
+.tema-flu-pre {
+	border: 1px solid;
+}
+.tema-flu-pre,
+.tema-flu-pre[class*=punta-]::before,
+.tema-flu-pre [class*=punta-]::before {
+	border-color: #fff !important;
+}
+
+/* tex fondo blanegro */
+.tema-nav-pre .caja-oculta li a {
+	color: #333  !important;
+}
+* [class*=boton-].tema-bt-pre,
+.boton.tema-bt-pre {
+	background-color: transparent !important;
+}

@@ -1,0 +1,77 @@
+
+/*--------------------
+ Menu iconos */
+.caja-navegacion .menu-iconos {
+	display: flex;
+	width: 15rem;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	text-align: center;
+	margin-top: 10px;
+	right: 0;
+	padding: 15px 0;
+	-webkit-transition: all ease-out 200ms;
+		 -o-transition: all ease-out 200ms;
+			transition: all ease-out 200ms;
+	background-color: #fff;
+}
+.caja-navegacion .menu-iconos.flecha-arr:before {
+	left: calc(100% - 50px);
+}
+.caja-navegacion .menu-iconos > li {
+	float: left;
+	display: inline-block;
+}
+.caja-navegacion .menu-iconos > li a {
+	display: flex;
+	-ms-align-items: center;
+		align-items: center;
+	justify-content: center;
+	-webkit-flex-wrap: wrap;
+	-ms-flex-wrap: wrap;
+	-o-flex-wrap: wrap;
+	flex-wrap: wrap;
+	padding: 10px;
+	width: 5rem;
+	height: 5rem;
+}
+.caja-navegacion .menu-iconos > li i {
+	display: block;
+	width: 100%;
+	font-size: 1.5em;
+	margin-bottom: .5rem;
+	margin: 0 !important;
+	transition: transform 200ms ease-in;
+}
+.caja-navegacion .menu-iconos > li span {
+	display: block;
+	font-size: .6em;
+	-ms-text-overflow: ellipsis;
+		text-overflow: ellipsis;
+			white-space: nowrap;
+	overflow: hidden;
+}
+
+.caja-navegacion .menu-iconos > li:hover {
+	background-color: rgba(0,0,0,.1);
+}
+
+/* li-bloq */
+.caja-navegacion .menu-iconos .li-titulo {
+	margin: 10px 0;
+	position: relative;
+	width: 100%;
+	text-align: left;
+	padding: 5px 15px;
+	background-color: rgba(0,0,0,.1) !important;
+	font-weight: bold;
+	font-size: .8em;
+}
+.caja-navegacion .menu-iconos .li-hr {
+	width: 100%;
+}
+.caja-navegacion .menu-iconos .li-hr hr {
+	border-top-color: currentColor !important;
+}

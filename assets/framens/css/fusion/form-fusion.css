@@ -1,0 +1,299 @@
+@import url("form-fusion/bloq-checked.css");
+
+
+
+.bloq-form {
+	display: inline-block;
+	margin-bottom: .5em;
+}
+.bloq-form .bloq-titulo {
+	font-size: .9rem;
+	margin-bottom: .2em;
+}
+.bloq-form > label {
+	display: block;
+	width: 100%;
+}
+.bloq-form .bloq-texto {
+	display: inline-block;
+	margin-left: .8em;
+	width: auto;
+	-webkit-user-select: none;
+	   -moz-user-select: none;
+		 -ms-user-select:none;
+}
+
+/* ajuste de grupo de bloques */
+.bloq-form.flexi-just {
+	width: 100%;
+}
+.bloq-form.flexi-just.dos-bloq .form-dato {
+	width: calc(50% - 5px);
+}
+.bloq-form.flexi-just.tres-bloq .form-dato {
+	width: calc(33.333333% - 5px);
+}
+.bloq-form.flexi-just.dos-bloq .form-dato,
+.bloq-form.flexi-just.tres-bloq  .form-dato {
+	margin-bottom: 0;
+}
+
+
+/* bloque de formulario */
+/* datos */
+.form-areatexto,
+.form-seleccion,
+.form-buscar,
+.form-dato {
+	position: relative;
+	display: -webkit-flex;
+	display: -webkit-box;
+	display: -ms-flexbox;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	-ms-align-items: center;
+		align-items: center;
+	margin-bottom: .85em;
+	font-size: 1rem;
+}
+form [class*=boton-],
+form .boton {
+	padding: 8px 12px;
+	vertical-align: 0;
+}
+.form-areatexto textarea,
+.form-seleccion select,
+.form-buscar input,
+.form-dato input {
+	width: 100%;
+	position: relative;
+	border: 1px solid #BDBBBB;
+	padding: 8px 12px 8px 12px;
+	background-color: #fff;
+	color: #333;
+
+	-webkit-transition: all ease-out 200ms;
+	-o-transition: all ease-out 200ms;
+	transition: all ease-out 200ms;
+}
+.form-seleccion select {
+	-webkit-appearance: none;
+ 		-moz-appearance: none;
+      		 appearance: none;
+    cursor: pointer;
+}
+.form-seleccion select::-ms-expand {
+    display: none;
+}
+
+
+.form-areatexto textarea {
+	max-width: 100%;
+	min-width: 100%;
+	padding: 15px;
+	min-height: 100px;
+	font-family: inherit;
+}
+.form-areatexto textarea:focus,
+.form-seleccion select:focus,
+.form-buscar input:focus,
+.form-dato input:focus {
+	border-color: #5FC5F4;
+}
+
+
+
+
+.form-areatexto.con-icono textarea,
+.form-seleccion.con-icono select,
+.form-buscar.con-icono input,
+.form-dato.con-icono input {
+	padding: 8px 40px 8px 12px;
+}
+.form-areatexto.con-icono textarea:focus + .form-icono,
+.form-seleccion.con-icono select:focus + .form-icono,
+.form-buscar.con-icono input:focus + .form-icono,
+.form-dato.con-icono input:focus + .form-icono {
+	color: #5FC5F4;
+}
+.form-seleccion.con-icono .form-icono,
+.form-buscar.con-icono .form-icono,
+.form-dato.con-icono .form-icono {
+	display: block;
+	position: absolute;
+	top: calc(50% - .505em);
+	font-size: 1.1em;
+	right: 12px;
+}
+.form-areatexto.con-icono .form-icono {
+	display: block;
+	position: absolute;
+	font-size: 1.1em;
+	right: 15px;
+	top: 15px;
+}
+.form-icono {
+	color: #BDBBBB;
+	-webkit-transition: all ease-out 200ms;
+	-o-transition: all ease-out 200ms;
+	transition: all ease-out 200ms;
+}
+/* datos */
+
+
+
+
+.ajust-titulo-anim .bloq-form {
+	margin-bottom: 1.5em;
+}
+.anim-titulo {
+	position: absolute;
+	transform: translateY(0);
+	transition: all ease-out 200ms;
+	z-index: -1;
+	font-size: 1em;
+	color: #BDBBBB;
+}
+.bloq-form input:focus ~ .anim-titulo {
+	transform: translateY(-24px) scale(.9);
+}
+
+
+/* boton subir archivo */
+.form-archivo.boton-archivo {
+	vertical-align: middle;
+	padding: 0.358rem 1.2rem;
+}
+.form-archivo.boton-archivo > i {
+	vertical-align: middle !important;
+}
+.form-archivo.boton-archivo input[type=file] {
+	-webkit-appearance: none;
+	   -moz-appearance: none;
+     		appearance: none;
+	cursor: pointer;
+	opacity: 0;
+	z-index: 1;
+	position: absolute;
+	top: 0;
+	left: 0;
+	width: 100%;
+	height: 100%;
+	display: block;
+}
+.form-archivo.boton-archivo {
+	
+}
+
+/* ajuste de boton al final */
+.bloq-form.con-boton > .bloq-form {
+	width: calc(100% - 150px - 10px);
+}
+.bloq-form.con-boton > .bloq {
+	width: 150px;
+	margin-left: 10px;
+}
+/* pequeño */
+.bloq-form.con-boton.peq > .bloq-form {
+	width: calc(100% - 100px - 10px);
+}
+.bloq-form.con-boton.peq > .bloq {
+	width: 100px;
+	margin-left: 10px;
+}
+/* mini */
+.bloq-form.con-boton.mini > .bloq-form {
+	width: calc(100% - 50px - 10px);
+}
+.bloq-form.con-boton.mini > .bloq {
+	width: 50px;
+	margin-left: 10px;
+}
+
+
+
+/* ajustes rapidos */
+
+.ajust-bloq .bloq-form {
+	width: 100%;
+}
+
+.sin-margenes .form-dato {
+	margin-bottom: 0;
+	margin-top: 0;
+}
+
+
+
+/* Estilo linea
+---------------------------------*/
+
+.estilo-linea textarea,
+.estilo-linea input,
+.estilo-linea select {
+	border: 0;
+	border-bottom: 1px solid #BDBBBB;
+	background-color: transparent;
+}
+.estilo-linea textarea {
+	border: 0;
+	border-left: 2px solid #BDBBBB;
+}
+
+.estilo-burbuja input,
+.estilo-burbuja select {
+	border-radius: 100em;
+	border-bottom: 1px solid #BDBBBB;
+}
+.estilo-burbuja textarea {
+	border-left: 2px solid #BDBBBB;
+	border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.estilo-burbuja-plas input,
+.estilo-burbuja-plas select {
+	border: 1px solid transparent;
+	background-color: #F6F6F6;
+	border-radius: 100em;
+}
+.estilo-burbuja-plas textarea {
+	border: 1px solid transparent;
+	background-color: #F6F6F6;
+	border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.estilo-burbuja-plas input:focus,
+.estilo-burbuja-plas select:focus,
+.estilo-burbuja-plas textarea:focus {
+	border: 1px solid #5FC5F4;
+}
+
+/* RESPONSIVO
+---------------------------------
+*/
+@media screen and (min-width: 480px)
+			  and (max-width: 768px){
+
+.bloq-form.flexi-just.dos-bloq .form-dato {
+	width: 100%;
+}
+.bloq-form.flexi-just.tres-bloq .form-dato {
+	width: 100%;
+}
+
+
+}
+
+@media screen and (min-width: 0px)
+			  and (max-width: 480px){
+
+.bloq-form.flexi-just.dos-bloq .form-dato {
+	width: 100%;
+}
+.bloq-form.flexi-just.tres-bloq .form-dato {
+	width: 100%;
+}
+
+}

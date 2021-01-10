@@ -1,0 +1,44 @@
+/* efecto-borde animimado
+----------------------------- */
+ul.efecto-borde > li > a {
+	position: relative;
+	color: #fff;
+}
+ul.efecto-borde > li > a:before {
+	content: '';
+	position: absolute;
+	bottom: 0;
+	width: 0;
+	height: 0;
+	border-bottom: 3px solid #fff;
+	-webkit-transition: all ease-out 200ms;
+		 -o-transition: all ease-out 200ms;
+			transition: all ease-out 200ms;
+}
+ul.efecto-borde.estatico > li > a:before {
+	width: 100%;
+	opacity: 0;
+	left: 0;
+}
+ul.efecto-borde.estatico > li:hover > a:before {
+	opacity: 1;
+}
+ul.efecto-borde.izq-der > li > a:before {
+	left: 0;
+}
+ul.efecto-borde.izq-der > li:hover > a:before {
+	width: 100%;
+}
+ul.efecto-borde.centro > li > a:before {
+	left: calc(100% - 50%);
+}
+ul.efecto-borde.centro > li:hover > a:before {
+	width: 100%;
+	left: calc(100% - 100%);
+}
+ul.efecto-borde.der-izq > li > a:before {
+	right: 0;
+}
+ul.efecto-borde.der-izq > li:hover > a:before {
+	width: 100%;
+}

@@ -1,0 +1,197 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+    <link rel="stylesheet" type="text/css" href="assets/framens/css/fusion/fusion.css">
+    <link rel="stylesheet" type="text/css" href="assets/framens/css/fusion/form-fusion.css">
+    <link rel="stylesheet" type="text/css" href="assets/framens/css/fusion/nav-fusion.css">
+    <link rel="stylesheet" type="text/css" href="assets/framens/css/fusion/utilidades.css">
+    <link rel="stylesheet" type="text/css" href="assets/framens/multimedia/iconmoon/iconos.css">
+    <link rel="stylesheet" type="text/css" href="assets/framens/css/index.css">
+</head>
+<body>
+<div id="app">
+    <menu-index></menu-index>
+
+<section class="body">
+<!--============================
+=            seccion            =
+=============================-->
+
+<section class="rell-1">
+    <form class="bloque sombra-2 rell-1 ajust-bloq" action="#" method="post" accept-charset="utf-8">
+        <div class="bloq-form">
+            <label class="bloq-titulo">Cargo</label>
+            <div class="form-seleccion con-icono">
+                <select name="">
+                    <option selected="selected" value="" disabled="disabled">--- Selecciona un cargo ---</option>
+                    <option value="Medigo">Medigo</option>
+                    <option value="Odontologo">Odontologo</option>
+                    <option value="Enfermeria">Enfermeria</option>
+                    <option value="Registro">Registro</option>
+                </select>
+                <span class="form-icono icon-menu"></span>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">Nombre</label>
+            <div class="form-dato con-icono">
+                <input type="text" name="user_nombre" placeholder="Nombre" pattern="[A-Za-z0-9 ]{1,30}" required/>
+                <span class="form-icono icono-usuario"></span>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">Apellido</label>
+            <div class="form-dato con-icono">
+                <input type="text" name="user_nombre" placeholder="Apellido" pattern="[A-Za-z0-9 ]{1,30}" required/>
+                <span class="form-icono icono-usuario"></span>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">Numero de identificacion</label>
+            <div class="flexi">
+                <div class="form-seleccion con-icono an-6">
+                    <select name="">
+                        <option selected="selected" value="" disabled="disabled">--- Tipo ---</option>
+                        <option value="Medigo">CC</option>
+                        <option value="Odontologo">CI</option>
+                    </select>
+                    <span class="form-icono icon-menu"></span>
+                </div>
+                <div class="form-dato con-icono an-6">
+                    <input type="text" name="user_nombre" placeholder="Numero" pattern="[A-Za-z0-9 ]{1,30}" required/>
+                    <span class="form-icono icono-usuario"></span>
+                </div>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">fecha de nacimiento</label>
+            <div class="form-dato con-icono">
+                <input data-format="aaaa-mm-dd" type="date" name="user_datos" required/>
+                <span class="form-icono icono-buscar"></span>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">Departamento</label>
+            <div class="form-seleccion con-icono">
+                <select name="">
+                    <option selected="selected" value="" disabled="disabled">--- Selecciona un departamento ---</option>
+                    <option value="Medigo">Magdalena</option>
+                    <option value="Odontologo">Atlantico</option>
+                    <option value="Enfermeria">Guajira</option>
+                    <option value="Registro">Medellin</option>
+                </select>
+                <span class="form-icono icon-menu"></span>
+            </div>
+        </div>
+        <div class="bloq-form">
+            <label class="bloq-titulo">Ciudad</label>
+            <div class="form-seleccion con-icono">
+                <select name="">
+                    <option selected="selected" value="" disabled="disabled">--- Selecciona una ciauda ---</option>
+                    <option value="Medigo">Pivijay</option>
+                    <option value="Odontologo">Santamarta</option>
+                    <option value="Enfermeria">Media luna</option>
+                    <option value="Registro">Fundación</option>
+                </select>
+                <span class="form-icono icon-menu"></span>
+            </div>
+        </div>
+
+        <div class="bloq-form">
+            <label class="bloq-titulo">Correo</label>
+            <div class="form-dato con-icono">
+                <input type="text" name="user_nombre" placeholder="Correo@mail.com" pattern="[A-Za-z0-9 ]{1,30}" required/>
+                <span class="form-icono icono-usuario"></span>
+            </div>
+        </div>
+        <hr class="bord-pre">
+        <h4>Estado de salud del usuario</h4>
+        <label class="label-pers tex-pre">Selecciones los factores de riesgos del usuario</label>
+        <div class="cart-selecciona marg-arr-1">
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Trabajador de salud" type="checkbox"/><span>Trabajador de salud</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Orticoide" type="checkbox"/><span>Orticoide</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Fumador" type="checkbox"/><span>Fumador</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Desnutrición" type="checkbox"/><span>Desnutrición</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Sobre peso" type="checkbox"/><span>Sobre peso</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Hipercolesterol" type="checkbox"/><span>Hipercolesterol</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Deficiencia imunologica" type="checkbox"/><span>Deficiencia imunologica</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Cáncer" type="checkbox"/><span>Cáncer</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Estrés" type="checkbox"/><span>Estrés</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Problemas pulmonares" type="checkbox"/><span>Problemas pulmonares</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Problemas cardíacos" type="checkbox"/><span>Problemas cardíacos</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Hipotiroidismo" type="checkbox"/><span>Hipotiroidismo</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Falla renal" type="checkbox"/><span>Falla renal</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Alimentacion alta en grasa" type="checkbox"/><span>Alimentación alta en grasa</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Consumo de alcohol" type="checkbox"/><span>Consumo de alcohol</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Consumo de cigarrillo" type="checkbox"/><span>Consumo de cigarrillo</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Diabetes" type="checkbox"/><span>Diabetes</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Hipertension" type="checkbox"/><span>Hipertensión</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Obesidad" type="checkbox"/><span>Obesidad</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Asma" type="checkbox"/><span>Asma</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Angia de pecho" type="checkbox"/><span>Angia de pecho</span>
+            </label>
+            <label class="selecciona">
+                <input name="f_riesgo[]" value="Sin problemas" type="checkbox"/><span>Ninguna de las anteriores</span>
+            </label>
+        </div>
+        <div class="bloque alin-cen">
+            <button type="submit" name="registrarXD" class="boton an-100 tema-pre">Registrar</button>
+        </div>
+
+    </form>
+</section>
+
+
+<!--====  End of seccion  ====-->
+</section>
+</div>
+
+<script type="text/javascript" src="assets/framens/js/vue-v2.js"></script>
+<script type="text/javascript" src="assets/framens/js/js-index.js"></script>
+
+</body>
+</html>

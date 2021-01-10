@@ -1,0 +1,282 @@
+
+/*---------------------------------
+  IMPORTACIONES
+-----------------------------------*/
+
+@import url("nav-fusion/sub-menu-iconos.css");
+@import url("nav-fusion/sub-menu-ancho.css");
+@import url("nav-fusion/sub-menu-panel.css");
+@import url("nav-fusion/evento-clic.css");
+@import url("nav-fusion/efectos-li.css");
+
+
+/*---------------------------------
+  Menu
+-----------------------------------*/
+
+.caja-navegacion {
+	position: relative;
+	font-size: 1em;
+	display: flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+}
+.caja-navegacion ul > li > .nav-titulo,
+.caja-navegacion ul > li > .nav-a,
+.caja-navegacion ul > li > a,
+.caja-navegacion ul > li {
+	-webkit-transition: all ease-out 250ms;
+	-o-transition: all ease-out 250ms;
+	transition: all ease-out 250ms;
+}
+.caja-navegacion.nav-horizontal > .nav-ul,
+.caja-navegacion.nav-horizontal > ul {
+	display: flex;
+	-webkit-flex-wrap: wrap;
+		-ms-flex-wrap: wrap;
+			flex-wrap: wrap;
+	-ms-align-items: center;
+	align-items: center;
+	width: auto;
+}
+.caja-navegacion.nav-horizontal > ul > li {
+	display: inline-flex;
+	-ms-align-items: center;
+		align-items: center;
+}
+.caja-navegacion.nav-vertical {
+	-webkit-box-direction: normal;
+	-webkit-box-orient: vertical;
+	-webkit-flex-direction: column;
+		-ms-flex-direction: column;
+			flex-direction: column;
+}
+.caja-navegacion.nav-vertical > .nav-ul > li {
+	display: inline-flex;
+	width: 100%;
+}
+.caja-navegacion.nav-horizontal ul.li-div-todo li:not(.nav-titulo):not(.li-boton):not(.sin-estilo) + li,
+.caja-navegacion.nav-horizontal ul.li-div > li:not(.nav-titulo):not(.li-boton):not(.sin-estilo) + li {
+	border-left: 1px solid rgba(0,0,0,.08);
+}
+.caja-navegacion.nav-vertical ul.li-div-todo li:not(.nav-titulo):not(.li-boton):not(.sin-estilo) + li,
+.caja-navegacion.nav-vertical ul.li-div > li:not(.nav-titulo):not(.li-boton):not(.sin-estilo) + li {
+	border-top: 1px solid rgba(0,0,0,.08);
+}
+.caja-navegacion ul > li.nav-titulo,
+.caja-navegacion ul > li.li-icono,
+.caja-navegacion li > .nav-a,
+.caja-navegacion li > a {
+	padding: 10px 20px;
+	cursor: pointer;
+	color: inherit;
+	white-space: nowrap;
+	display: block;
+}
+/* reset boton circulo */
+.caja-navegacion li > a.boton-cir {
+	padding: 0;
+	display: inline-flex;
+	color: #fff;
+}
+.sep-btn-cir li + li {
+	margin-left: .5rem;
+}
+.caja-navegacion ul > li.nav-titulo .nav-a,
+.caja-navegacion ul > li.li-icono .nav-a,
+.caja-navegacion ul > li.nav-titulo a,
+.caja-navegacion ul > li.li-icono a {
+	padding: 0;
+}
+.caja-navegacion ul > li.nav-titulo {
+	font-weight: bold;
+	margin-bottom: 0;
+}
+/* nav titulo icono o img */
+.caja-navegacion ul > li.nav-titulo .bloq-icono {
+	width: 25px;
+	height: 25px;
+	margin-right: 0.5rem;
+	vertical-align: bottom;
+	background-color: rgba(0,0,0,.1);
+}
+/* logo en linea */
+.caja-navegacion li.li-logo {
+	padding: 0 1em;
+}
+.caja-navegacion li.li-logo img {
+	height: 2.6rem;
+	width: auto;
+}
+/* li-avatar */
+.caja-navegacion li.li-avatar {
+	padding: 4px 15px;
+}
+.caja-navegacion li.li-avatar a {
+	padding: 6px 0 !important;
+	color: inherit;
+	display: inline-block;
+	font-weight: bold;
+}
+
+/* imagen logo */
+.caja-navegacion li.li-img {
+	padding: 0 1em;
+}
+.caja-navegacion li.li-img img {
+	max-width: 100px;
+}
+/*--------------------
+ ajustar icono */
+.caja-navegacion ul > li i.i-izq,
+.caja-navegacion li > .nav-titulo > i, 
+.caja-navegacion li > .nav-li > i, 
+.caja-navegacion li > .nav-a > i, 
+.caja-navegacion li > a > i, 
+.caja-navegacion .nav-icono i,
+.caja-navegacion .li-icono i {
+	display: inline-block;
+	-webkit-transform: scale(1.2) translateY(.008em);
+	 	-ms-transform: scale(1.2) translateY(.008em);
+		 -o-transform: scale(1.2) translateY(.008em);
+			transform: scale(1.2) translateY(.008em);
+}
+.caja-navegacion ul > li > i.i-izq,
+.caja-navegacion .nav-icono .nav-titulo > i,
+.caja-navegacion .nav-icono .nav-li > i,
+.caja-navegacion .nav-icono .nav-a > i,
+.caja-navegacion .nav-icono a > i,
+.caja-navegacion .li-icono .nav-a > i,
+.caja-navegacion .li-icono a > i {
+	margin-right: 15px;
+}
+/* FIN ajustar icono */
+
+.caja-navegacion li > a {
+	width: 100%;
+	display: block;
+}
+.li-boton .boton {
+	height: 100%;
+	border: 0;
+	border-radius: 0;
+	-webkit-box-shadow: none !important;
+	box-shadow: none !important;
+	color: #fff;
+}
+
+
+/* sub navegaciones */
+/* flotante */
+.caja-navegacion li.mostrar-caja-flo > a,
+.caja-navegacion li.mostrar-caja > a {
+	padding: 10px 40px 10px 20px;
+	position: relative;
+}
+.caja-navegacion li.mostrar-caja-flo > a:after,
+.caja-navegacion li.mostrar-caja > a:after {
+	position: absolute;
+	right: 0;
+	content: '\002B';
+	padding: 0 15px 0 0;
+	color: inherit;
+}
+.caja-navegacion li.mostrar-caja-flo:hover > a:after,
+.caja-navegacion li.mostrar-caja:hover > a:after {
+	content: '\2212';
+}
+.caja-navegacion .menu-iconos,
+.caja-navegacion .sub-nav {
+	background-color: #fff;
+	min-width: 100%;
+	display: table; /* remover este si hay problemas con ajustar contenedos sub nav */
+	top: 100%;
+	z-index: 15;
+}
+.caja-navegacion .sub-nav > li {
+	display: inline-flex;
+	width: 100%;
+}
+.caja-navegacion ul.sub-nav.li-div > li {
+	border-bottom: 0 solid rgba(0,0,0,.1);
+}
+.caja-navegacion .mostrar-caja-flo .sub-nav {
+	height: 100%;
+}
+
+
+/* efecto transicion */
+ul.efecto-trans > li:hover:not(.nav-titulo):not(.sin-estilo):not(.li-logo):not(.li-img):not(.li-avatar) {
+	background-color: rgba(0,0,0,.05);
+}
+ul.efecto-trans.bla > li:hover:not(.nav-titulo):not(.sin-estilo):not(.li-logo):not(.li-img):not(.li-avatar) {
+	background-color: rgba(255,255,255,.1);
+}
+
+.caja-navegacion .sub-nav {
+	background-color: #ffffff;
+  -webkit-box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px -2px rgba(0, 0, 0, 0.12);
+          box-shadow: 0 2px 2px 0 rgba(0, 0, 0, 0.14), 0 1px 5px -2px rgba(0, 0, 0, 0.12);
+}
+
+
+/* Li utlidades */
+.li-hr,
+.li-contenido,
+.li-bloq,
+.li-titulo {
+	position: relative;
+	display: inline-block;
+}
+
+/* PAGINACION
+---------------------------------
+*/
+.caja-navegacion.nav-paginacion {
+	border: 1px solid rgba(0,0,0,.1);
+	width: auto;
+	display: inline-block;
+	float: left;
+}
+.caja-navegacion.nav-paginacion ul > li {
+	border-right: 1px solid rgba(0,0,0,.1);
+}
+.caja-navegacion.nav-paginacion ul > li:last-child {
+	border-right: 0;
+}
+.caja-navegacion.nav-paginacion ul > li a:hover {
+	background-color: rgba(0,0,0,.1);
+}
+.caja-navegacion.nav-paginacion ul > li.clic-desabilitado a {
+	opacity: .7;
+	pointer-events: none;
+}
+
+/*---------------------------------
+  Reset
+-----------------------------------*/
+.caja-navegacion.nav-horizontal ul > .boton {
+	padding: 10px 20px;
+	border-radius: 0;
+	box-shadow: none !important;
+}
+.caja-navegacion.nav-vertical ul > .boton {
+	padding: 10px 20px;
+	display: block;
+	width: 100%;
+	border-radius: 0;
+	box-shadow: none !important;
+}
+
+
+/* RESPONSIVO
+---------------------------------
+*/
+@media screen and (min-width: 480px)
+			  and (max-width: 768px){
+}
+
+@media screen and (min-width: 0px)
+			  and (max-width: 480px){
+}

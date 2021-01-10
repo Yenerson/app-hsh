@@ -1,0 +1,39 @@
+.estilo-linea textarea,
+.estilo-linea input,
+.estilo-linea select {
+	border: 0;
+	border-bottom: 1px solid #BDBBBB;
+	background-color: transparent;
+}
+.estilo-linea textarea {
+	border: 0;
+	border-left: 2px solid #BDBBBB;
+}
+
+.estilo-burbuja input,
+.estilo-burbuja select {
+	border-radius: 100em;
+	border-bottom: 1px solid #BDBBBB;
+}
+.estilo-burbuja textarea {
+	border-left: 2px solid #BDBBBB;
+	border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.estilo-burbuja-plas input,
+.estilo-burbuja-plas select {
+	border: 1px solid transparent;
+	background-color: #F6F6F6;
+	border-radius: 100em;
+}
+.estilo-burbuja-plas textarea {
+	border: 1px solid transparent;
+	background-color: #F6F6F6;
+	border-radius: 1.5rem 1.5rem 0 1.5rem;
+}
+
+.estilo-burbuja-plas input:focus,
+.estilo-burbuja-plas select:focus,
+.estilo-burbuja-plas textarea:focus {
+	border: 1px solid #5FC5F4;
+}

@@ -1,0 +1,313 @@
+/*------------
+Tema Colores para tarjetas
+===================================== importante */
+
+/* tema prim */
+.fondo-prim[class*=punta-]:before,
+.tema-prim[class*=punta-]:before,
+.tema-est-prim,
+.fondo-prim,
+.tema-prim {
+	background-color: #4585e8 !important;
+}
+.tema-est-prim,
+.fondo-prim-s,
+.tema-prim-s {
+	background-color: #E0E7F3 !important;
+}
+.tema-bt-prim,
+.tex-prim {
+	color: #4585e8 !important;
+}
+a.tex-prim:hover {
+	color: #72A0E8 !important;
+}
+.tema-est-prim,
+.tema-bt-prim,
+.bord-prim {
+	border-color: #4585e8 !important;
+}
+.vidrio-prim {
+	background-color: rgba(69,133,232,.5) !important;
+}
+
+/* tema sec */
+.fondo-mate[class*=punta-]:before,
+.tema-mate[class*=punta-]:before,
+.tema-est-mate,
+.fondo-mate,
+.tema-mate {
+	background-color: #34454e !important;
+}
+.tema-est-mate,
+.fondo-mate-s,
+.tema-mate-s {
+	background-color: #D3DBDF !important;
+}
+.tema-bt-mate,
+.tex-mate {
+	color: #34454e !important;
+}
+a.tex-mate:hover {
+	color: #566268 !important;
+}
+.tema-est-mate,
+.tema-bt-mate,
+.bord-mate {
+	border-color: #34454e !important;
+}
+.vidrio-mate {
+	background-color: rgba(52,69,72,.5) !important;
+}
+
+/* tema pel */
+.fondo-pel[class*=punta-]:before,
+.tema-pel[class*=punta-]:before,
+.tema-est-pel,
+.fondo-pel,
+.tema-pel {
+	background-color: #ff4040 !important;
+}
+.tema-est-pel,
+.fondo-pel-s,
+.tema-pel-s {
+	background-color: #ffcccc !important;
+}
+.tema-bt-pel,
+.tex-pel {
+	color: #ff4040 !important;
+}
+a.tex-pel:hover {
+	color: #FF7C7C !important;
+}
+.tema-est-pel,
+.tema-bt-pel,
+.bord-pel {
+	border-color: #ff4040 !important;
+}
+.vidrio-pel {
+	background-color: rgba(255,64,64,.5) !important;
+}
+
+/* tema aler */
+.fondo-aler[class*=punta-]:before,
+.tema-aler[class*=punta-]:before,
+.tema-est-aler,
+.fondo-aler,
+.tema-aler {
+	background-color: #ffbc33 !important;
+}
+.tema-est-aler,
+.fondo-aler-s,
+.tema-aler-s {
+	background-color: #fff4cc !important;
+}
+.tema-bt-aler,
+.tex-aler {
+	color: #ffbc33 !important;
+}
+a.tex-aler:hover {
+	color: #FFD172 !important;
+}
+.tema-est-aler,
+.tema-bt-aler,
+.bord-aler {
+	border-color: #ffbc33 !important;
+}
+.vidrio-aler {
+	background-color: rgba(255,188,51,.5) !important;
+}
+
+/* tema aci */
+.fondo-aci[class*=punta-]:before,
+.tema-aci[class*=punta-]:before,
+.tema-est-aci,
+.fondo-aci,
+.tema-aci {
+	background-color: #3bb23b !important;
+}
+.tema-est-aci,
+.fondo-aci-s,
+.tema-aci-s {
+	background-color: #ccffcc !important;
+}
+.tema-bt-aci,
+.tex-aci {
+	color: #3bb23b !important;
+}
+a.tex-aci:hover {
+	color: #71CA71 !important;
+}
+.tema-est-aci,
+.tema-bt-aci,
+.bord-aci {
+	border-color: #3bb23b !important;
+}
+.vidrio-aci {
+	background-color: rgba(59,178,59,.5) !important;
+}
+
+/* tema inf */
+.fondo-inf[class*=punta-]:before,
+.tema-inf[class*=punta-]:before,
+.tema-est-inf,
+.fondo-inf,
+.tema-inf {
+	background-color: #00acbf !important;
+}
+.tema-est-inf,
+.fondo-inf-s,
+.tema-inf-s {
+	background-color: #D3F1F0 !important;
+}
+.tema-bt-inf,
+.tex-inf {
+	color: #00acbf !important;
+}
+a.tex-inf:hover {
+	color: #52C6D3 !important;
+}
+.tema-est-inf,
+.tema-bt-inf,
+.bord-inf {
+	border-color: #00acbf !important;
+}
+.vidrio-inf {
+	background-color: rgba(0,172,191,.5) !important;
+}
+
+
+/* tema cla */
+.fondo-clar[class*=punta-]:before,
+.tema-clar[class*=punta-]:before,
+.tema-est-clar,
+.fondo-clar,
+.tema-clar {
+	background-color: #FFFFFF !important;
+}
+.tema-est-clar,
+.fondo-clar-s,
+.tema-clar-s {
+	background-color: #F4F6FA !important;
+}
+.tema-bt-clar,
+.tex-clar {
+	color: #FFFFFF !important;
+}
+a.tex-clar:hover {
+	color: #EDEDED !important;
+}
+.tema-est-clar,
+.tema-bt-clar,
+.bord-clar {
+	border-color: #FFFFFF !important;
+}
+.vidrio-clar-s {
+	background-color: rgba(255,255,255,.3) !important;
+}
+.vidrio-clar {
+	background-color: rgba(255,255,255,.5) !important;
+}
+.vidrio-clar-2 {
+	background-color: rgba(255,255,255,.8) !important;
+}
+
+/* tema osc */
+.fondo-osc[class*=punta-]:before,
+.tema-osc[class*=punta-]:before,
+.tema-est-osc,
+.fondo-osc,
+.tema-osc {
+	background-color: #0A0A0A !important;
+}
+.tema-est-osc,
+.fondo-osc-s,
+.tema-osc-s {
+	background-color: #c1ced5 !important;
+}
+.tema-bt-osc,
+.tex-osc {
+	color: #0A0A0A !important;
+}
+a.tex-osc:hover {
+	color: #434343 !important;
+}
+.tema-est-osc,
+.tema-bt-osc,
+.bord-osc {
+	border-color: #0A0A0A !important;
+}
+.vidrio-osc-s {
+	background-color: rgba(0,0,0,.3) !important;
+}
+.vidrio-osc {
+	background-color: rgba(0,0,0,.5) !important;
+}
+.vidrio-osc-2 {
+	background-color: rgba(0,0,0,.8) !important;
+}
+
+/* tema gris */
+.fondo-mudo[class*=punta-]:before,
+.tema-mudo[class*=punta-]:before,
+.tema-est-mudo,
+.fondo-mudo,
+.tema-mudo {
+	background-color: #9F9F9F !important;
+}
+.tema-est-mudo,
+.fondo-mudo-s,
+.tema-mudo-s {
+	background-color: #E5E5E5 !important;
+}
+.tema-bt-mudo,
+.tex-mudo {
+	color: #9F9F9F !important;
+}
+a.tex-mudo:hover {
+	color: #C1C1C1 !important;
+}
+.tema-est-mudo,
+.tema-bt-mudo,
+.bord-mudo {
+	border-color: #9F9F9F !important;
+}
+.vidrio-mudo {
+	background-color: rgba(159,159,159,.5) !important;
+}
+
+
+.tema-inf,
+.tema-mate,
+.tema-bt-clar,
+.tema-mudo,
+.tema-osc,
+.tema-aci,
+.tema-pel,
+.tema-prim {
+	color: #ffffff !important;
+}
+
+.tema-clar,
+.tema-aler,
+.tema-est-inf,
+.tema-est-osc,
+.tema-est-clar,
+.tema-bt-aler,
+.tema-est-mate,
+.tema-est-mudo,
+.tema-est-aci,
+.tema-est-aler,
+.tema-est-pel,
+.tema-est-prim {
+	color: #333333 !important;
+}
+
+/*------------
+Colores vidrio
+===================================== importante */
+.fondo-vidrio {background-color: transparent !important;}
+.tex-vidrio {color: transparent !important;}
+.bord-vidrio {border-color: transparent !important;}
+
+
